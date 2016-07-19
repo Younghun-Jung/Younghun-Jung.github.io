@@ -6,13 +6,16 @@
 
 body{
 	font-family: 'Lato', sans-serif;
-	color: #747704;
+	color: #777777;
 	font-weight: 300;
-	margin-top: 10px;
+}
+
+#container{
+	margin-top:10px;
 }
 
 .text-muted{
-	color: #BCBBBB;
+	color: #929090;
 }
 
 .text-thin{
@@ -23,10 +26,63 @@ body{
 	margin-bottom: 5px;
 }
 
+#logo{
+	padding-top: 15px;
+}
+
+.link-project{
+	color: #337ab7;
+}
+
+#title-project{
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #ddd;
+}
+
+.project{
+	margin-bottom:50px;
+}
+
+footer{
+	margin-top: 5px;
+	border-top: 1px solid #ddd;;
+}
+
+[class*="zocial-"]:before {
+  color: black;
+  display: inline-block;
+  font-family: 'zocial', sans-serif;
+  text-shadow: 3px 3px 3px #aaa;
+  width: 2em;
+}
+
+div#social a {
+  margin: 0 1em 0 0;
+}
+
+div#social a:last-of-type {
+  margin: 0;
+}
+
+div#social {
+  line-height: 2em;
+}
+
+/*
 #top-image{
 	border-top: solid 5px #eeeeee;
 	padding-top: 15px;
 }
+*/
+
+/*Wow slider css user-defined*/
+#wowslider-container1{
+	border-top: solid 5px #eeeeee;
+	padding-top: 15px;	
+}
+/*----------------------------*/
+
 
 @media screen and (max-width: 1000px){
 	.top-content{
@@ -53,6 +109,12 @@ body{
 	.top-content{
 		display: flex;
 	}
+	.top-content div h1{
+		font-size: 29px;
+	}
+	.top-content div h3{
+		font-size: 20px;
+	}
 	#logo{
 		width: 30%;
 	}
@@ -66,10 +128,10 @@ body{
 		display: flex;
 	}
 	.top-content div h1{
-		font-size: 29px;
+		font-size: 25px;
 	}
 	.top-content div h3{
-		font-size: 20px;
+		font-size: 16px;
 	}
 	#logo{
 		width: 30%;

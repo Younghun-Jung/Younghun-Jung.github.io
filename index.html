@@ -7,8 +7,11 @@
       <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
       <link rel="stylesheet" type="text/css" href="./css/style.css">
       <link href='https://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" type="text/css" href="./external/engine1/style.css" />
+      <script type="text/javascript" src="./external/engine1/jquery.js"></script>
       <script src="https://code.jquery.com/jquery-1.9.1.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
       <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=zocial" />
     </head>
 
     <body>
@@ -20,11 +23,11 @@
             </div>
             <div class="col-md-6 text-right text-uppercase" id="name_role">
               <h1>Jung Younghun</h1>
-              <h3>Front-end Ninja</h3>
+              <h3>Front-end Novice</h3>
             </div>
           </div>
         </header>
-
+        <!--
         <section>
           <div class="row">
             <div class="col-md-12">
@@ -32,60 +35,83 @@
             </div>
           </div>
         </section>
+        -->
       
+      <!-- Start WOWSlider.com BODY section -->
+        <div id="wowslider-container1">
+          <div class="ws_images">
+            <ul>
+              <li><img src="./external/data1/images/topimage_1.jpg" alt="Web development" title="Web development" id="wows1_0"/></li>
+              <li><a href="http://wowslider.com/vi"><img src="./external/data1/images/topimage_2.jpg" alt="slider" title="UX development" id="wows1_1"/></a></li>
+              <li><img src="./external/data1/images/topimage_3.png" alt="Information VIs" title="Information VIs" id="wows1_2"/></li>
+            </ul>
+          </div>
+          <div class="ws_bullets">
+              <div>
+              <a href="#" title="Web development"><span><img src="./external/data1/tooltips/topimage_1.jpg" alt="Web development"/>1</span></a>
+              <a href="#" title="UX development"><span><img src="./external/data1/tooltips/topimage_2.jpg" alt="UX development"/>2</span></a>
+              <a href="#" title="Information VIs"><span><img src="./external/data1/tooltips/topimage_3.png" alt="Information VIs"/>3</span></a>
+              </div>
+          </div>
+          <div class="ws_shadow"></div>
+        </div>  
+        <script type="text/javascript" src="./external/engine1/wowslider.js"></script>
+        <script type="text/javascript" src="./external/engine1/script.js"></script>
+        <!-- End WOWSlider.com BODY section -->
+          
         <article>
           <header> 
             <div class="row">
               <div class="col-md-12">
-                <h2 class="text-muted">Featured Work</h2>
+                <h2 id="title-project" class="text-muted">Projects</h2>
               </div>
             </div>
           </header>
 
           <section>
             <div class="row">
-              <div class="col-md-6">
-                <img class="img-responsive" src="./img/555x300" data-toggle="modal" data-target="#project1">
-                <h3>Appify</h3>
-                <p><a href="http://github.com/">Link to project</a></p>
+              <div class="col-md-6 project">
+                <img class="img-responsive" src="./img/projects/pro-1.png" data-toggle="modal" data-target="#project1">
+                <h3>ESP Library</h3>
+                <p><span class="link-project" data-toggle="modal" data-target="#project1">More Info</span></p>
               </div>
-              <div class="col-md-6">
-                <img class="img-responsive" src="./img/555x300">
-                <h3>Appify</h3>
-                <p><a href="http://github.com/">Link to project</a></p>
+              <div class="col-md-6 project">
+                <img class="img-responsive" src="./img/projects/pro-2.png" data-toggle="modal" data-target="#project2">
+                <h3>YouSeeMe</h3>
+                <p><span class="link-project" data-toggle="modal" data-target="#project2">More Info</span></p>
               </div>
             </div>
 
             <div class="row">
-              <div class="col-md-6">
-                <img class="img-responsive" src="./img/555x300">
-                <h3>Appify</h3>
-                <p><a href="http://github.com/">Link to project</a></p>
+              <div class="col-md-6 project">
+                <img class="img-responsive"  src="./img/projects/pro-3.png" data-toggle="modal" data-target="#project3">
+                <h3>Collaborative Environment using Tiled-display</h3>
+                <p><span class="link-project" data-toggle="modal" data-target="#project3">More Info</span></p>
               </div>
-              <div class="col-md-6">
-                <img class="img-responsive" src="./img/555x300">
-                <h3>Appify</h3>
-                <p><a href="http://github.com/">Link to project</a></p>
+              <div class="col-md-6 project">
+                <img class="img-responsive"  src="./img/projects/pro-4.png" data-toggle="modal" data-target="#project4">
+                <h3>Oedipus</h3>
+                <p><span class="link-project" data-toggle="modal" data-target="#project4">More Info</span></p>
               </div>
-            </div>
+            </div> 
           </section>
         </article>    
-       
-        <footer>
-          <!--facebook, github, resume, -->
-        </footer>
-      </div>
 
       <!-- Modal -->
       <div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
               <div class="modal-content">
                   <div class="modal-header">
-                      <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
+                      <h4 class="modal-title" id="myModalLabel">Easy Screen and Play library</h4>
                   </div>
                   <div class="modal-body">
-                      <img class="img-responsive" src="img/555.jpeg">
-                      This was my first project in this class. I learned a lot about HTML and CSS.
+                    In this work, we present a library, called Easy Screens and Play (ESP), for information visualization in tiled display systems. We describe the design of the ESP library in the tiled display environment for novice users and its unique features as compared to other distributed display libraries. We also demonstrate the efficacy and effectiveness of the ESP library by using several examples of information visualization. Discussions on the extension of the library and future improvements are presented as well.
+                    <img class="img-responsive" src="img/projects/pro-1-1.png">
+                    <h5>World map</h5>
+                    <img class="img-responsive" src="img/projects/pro-1-2.png">
+                    <h5>Mosaic</h5>
+                    <img class="img-responsive" src="img/projects/pro-1-3.png">
+                    <h5>Info Viz</h5>
                   </div>
                   <div class="modal-footer">
                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -93,5 +119,73 @@
               </div>
           </div>
       </div>
+      <div class="modal fade" id="project2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h4 class="modal-title" id="myModalLabel">YouSeeMe, YouSeeMe: The perspective-aware display and its contents</h4>
+                  </div>
+                  <div class="modal-body">
+                   We created our own perspective-aware system YouSeeMe. This system warps the image towards the viewer position; the viewer always perceives undistorted image wherever they are in front of the display. Our research questions are the followings: Does the perspective-aware display YouSeeMe give a better experience to the users?, Do the types of the contents matter for user satisfaction? and if so, What is the most proper type of digital contents for the perspective-aware display? To answer these questions, we conducted experiment consisting of showing image, shape, and text type content to participants in various angles, since those types of contents represent graphical elements that are commonly shown on public displays. We surveyed the participants and evaluated based on four criteria; immersion, satisfaction, frontality, and affection. Our results show that text type content is the most suitable while shape type content is the least suitable in YouSeeMe. The completion of our ongoing experiments will provide guidelines about contents design for perspective-aware displays in the future.
+                    <img class="img-responsive" src="img/projects/pro-2-1.png">
+                    <h5>Device for Tracking and Detecting Face</h5>
+                    <img class="img-responsive" src="img/projects/pro-2-2.png">
+                    <h5>User Test</h5>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="modal fade" id="project3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h4 class="modal-title" id="myModalLabel">User Interaction and Interface Design in Collaborative Environment using Tiled-display</h4>
+                  </div>
+                  <div class="modal-body">
+                   This research considers tiled display system as an environment which ensures users can interact with others as well as a platform to visualize information and suggests a method of interaction among members in collaborative environment. Also, this research aims to verify usefulness of this interaction method through user case study using prototype application. For that, this research classified interaction patterns into three categories depending on the ways of sharing information in collaborative environment using tiled display. After that, this research extracted interaction elements, wrote scenarios to reflect them through analyzing related studies and usage of tiled display, and designed interaction model.
+                    <img class="img-responsive" src="img/projects/pro-3-1.png">
+                    <h5>Server Interface</h5>
+                    <img class="img-responsive" src="img/projects/pro-3-2.png">
+                    <h5>Client Interface</h5>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="modal fade" id="project4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h4 class="modal-title" id="myModalLabel">Oedipus: User Gait Correction System Using HMD in Real-time</h4>
+                  </div>
+                  <div class="modal-body">
+                   Abnrmal gait types that people have had result in serious health problem. Moreover, those people do not recognize their own gait habit. So, we designed system and developed prototype using HMD(Head Mounted Display) and Smart shoes(indcluding pressure sensors and bluetooth module) in order that users can recognize their gait type. Users' gait is displayed on screen of HMD in real-time. So, they can check their own gait type. Our system can assist to correct abnormal gait.
+                    <img class="img-responsive" src="img/projects/pro-4-1.png">
+                    <h5>Device: HMD and Smart shoes</h5>
+                    <img class="img-responsive" src="img/projects/pro-4-2.png">
+                    <h5>Interaction Method</h5>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <footer class="row">
+        <div class="col-md-12" id="social">
+          <a href="" class="zocial-twitter">Twitter</a>
+          <a href="" class="zocial-facebook">Facebook</a>
+          <a href="" class="zocial-googleplus">Google+</a>
+          <a href="" class="zocial-instagram">Instagram</a>
+        </div>
+      </footer>
+
+    </div>
   </body>
 </html>
