@@ -30,11 +30,17 @@ body{
 	padding-top: 15px;
 }
 
+#top-image{
+	border-top: 5px solid #ddd;
+	padding-top: 15px;
+	margin-bottom: 40px;
+}
+
 .link-project{
 	color: #337ab7;
 }
 
-#title-project{
+#title_project{
 	margin-bottom: 10px;
 	padding-bottom: 10px;
 	border-bottom: 2px solid #ddd;
@@ -42,6 +48,13 @@ body{
 
 .project{
 	margin-bottom:50px;
+	box-shadow: 5px 5px 5px #eae9eb;
+	border: 2px solid #eae9eb;
+	padding: 2px 0 0 0;
+}
+
+.project-image{
+	width: 100%;
 }
 
 footer{
@@ -69,22 +82,7 @@ div#social {
   line-height: 2em;
 }
 
-/*
-#top-image{
-	border-top: solid 5px #eeeeee;
-	padding-top: 15px;
-}
-*/
-
-/*Wow slider css user-defined*/
-#wowslider-container1{
-	border-top: solid 5px #eeeeee;
-	padding-top: 15px;	
-}
-/*----------------------------*/
-
-
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 990px){
 	.top-content{
 		display: flex;
 	}
