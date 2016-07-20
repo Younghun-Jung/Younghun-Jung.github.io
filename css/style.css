@@ -62,6 +62,7 @@ footer{
 	border-top: 1px solid #ddd;;
 }
 
+@import url(http://weloveiconfonts.com/api/?family=zocial);
 [class*="zocial-"]:before {
   color: black;
   display: inline-block;
