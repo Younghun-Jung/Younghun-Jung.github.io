@@ -38,7 +38,9 @@ body{
 
 .link-project{
 	color: #337ab7;
+	text-decoration:none;
 }
+
 
 #title_project{
 	margin-bottom: 10px;
@@ -56,6 +58,7 @@ body{
 .project-image{
 	width: 100%;
 }
+
 
 footer{
 	margin-top: 5px;
