@@ -168,7 +168,7 @@ body{
 		Profile.html
 */
 .profile-content {
-  width: 70%;
+  width: 80%;
   margin: 60px auto;
 }
 
@@ -179,8 +179,9 @@ body{
 	padding-bottom: 5px;
 }
 .title-2 {
-	font-size: 20px;
+	font-size: 28px;
 	padding-bottom: 3px;
+	color: gray;
 }
 .profile-Image {
   width: 200px;
@@ -192,10 +193,26 @@ body{
   width: 100%;
 }
 
-.Education div ul{
-	list-style-type: none;
+.Education {
+	padding: 20px;
+	background-color: rgba(247, 247, 247, 0.67);
 }
-
+.Education div ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+.Education div ul li{
+	margin-bottom: 1.2em;
+}
+.school-name .school-degree{
+	float: left;
+}
+.Education-details .school-area, .Education .school-date {
+	float: right;
+}
+.school-degree, .school-date, .school-prof {
+	font-weight:lighter;
+}
 
 /*.top-contents {
 	width: 100%;
