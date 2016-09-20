@@ -97,10 +97,34 @@ body{
 .content {
 	width: calc(100% - 280px);
 	height: 100vh;
-	float: right;
+	float: left;
 	position: relative;
-	/*left:280px;*/
+	left:280px;
 }
+.content.side-bar-out {
+	left: 0px;
+	width: 100%;
+}
+.side-bar.side-bar-out {
+	left: -500px;
+}
+#menu-icon {
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	top: 10px;
+	left: 300px;
+}
+#menu-icon.side-bar-out {
+	top:10px;
+	left:20px;
+}
+#menu-icon img {
+	width: 50px;
+	height: 50px;
+}
+
+
 #one {
 	width:100%;
 	height: 100%;
@@ -132,6 +156,7 @@ body{
 .scroll-arrow-down {
 	display: block;
 	margin: 0 auto;
+	margin-top: 25px;
 	width: 50px;
 	/*top: 450px;
 	left: 490px;*/
@@ -139,9 +164,9 @@ body{
 }
 
 .index-description-area {
-	width: 1100px;
+	width: 70%;
 	height: 500px;
-	/*position: absolute;*/
+	position: relative;
 	/*top: 150px;
 	left: 150px;*/
 	margin: 0 auto;
@@ -168,7 +193,7 @@ body{
 		Profile.html
 */
 .profile-content {
-  width: 80%;
+  width: 70%;
   margin: 60px auto;
 }
 
@@ -179,41 +204,130 @@ body{
 	padding-bottom: 5px;
 }
 .title-2 {
-	font-size: 28px;
+	font-size: 22px;
 	padding-bottom: 3px;
 	color: gray;
 }
-.profile-Image {
-  width: 200px;
+.profile-top {
+  width: 100%;
   height: 200px;
 	display: block;
 	margin: 50px auto 70px auto;
 }
 #myImage {
-  width: 100%;
+  width: 200px;
+	float:left;
+}
+.brief-profile {
+	float: left;
+	/*background-color: yellow;*/
+	/*width: 75%;*/
+	height: 200px;
+}
+.brief-profile-title {
+	color: gray;
+	font-weight: normal;;
+	margin-right: 8px;
+}
+.brief-profile-content {
+	font-weight: bold;
 }
 
-.Education {
+.entry-A {
 	padding: 20px;
-	background-color: rgba(247, 247, 247, 0.67);
+	background-color: rgba(234, 234, 234, 0.67);
+	margin-bottom: 20px;
 }
-.Education div ul {
+.entry-B {
+	padding: 20px;
+	margin-bottom: 20px;
+}
+.details {
+	font-size: 13px;
+}
+ul {
 	list-style-type: none;
 	padding-left: 0;
 }
-.Education div ul li{
+li{
 	margin-bottom: 1.2em;
+	overflow: auto;
+}
+li div {
+	overflow: auto;
+}
+
+/*Education part*/
+.school-name {
+	font-weight: bold;
+}
+.school-area, .school-date {
+	font-style: italic;
 }
 .school-name .school-degree{
 	float: left;
 }
-.Education-details .school-area, .Education .school-date {
+.school-area, .school-date {
 	float: right;
 }
 .school-degree, .school-date, .school-prof {
 	font-weight:lighter;
 }
 
+/*Publication part*/
+.paper-name {
+	font-weight: bold;
+}
+.paper-author {
+	float:left;
+	font-style: italic;
+}
+.paper-conference {
+	float: right;
+}
+
+/*Research Project part*/
+.project-name {
+	font-weight: bold;
+	float: left;
+}
+.project-date {
+	float: right;
+}
+.project-super {
+	font-style: italic;
+}
+
+/*Exhibition part*/
+.exhibition-name {
+	font-weight: bold;
+	float: left;
+}
+.exhibition-area {
+	font-weight: bold;
+	float: right;
+}
+.exhibition-keyword {
+	font-style: italic;
+}
+.exhibition-date {
+	float: right;
+}
+
+/*Honor and Award Part*/
+.honor-super {
+	font-weight: bold;
+}
+.honor-area {
+	float: right;
+	font-weight: bold;
+}
+.honor-title {
+	font-style: italic;
+}
+.honor-date {
+	float: right;
+}
 /*.top-contents {
 	width: 100%;
 	margin-top: 20px;;
@@ -247,3 +361,8 @@ body{
 	margin-right: 10%;
 	float:left;
 }*/
+
+/*Responsive display*/
+@media screen and (min-width: 768px) {
+
+}

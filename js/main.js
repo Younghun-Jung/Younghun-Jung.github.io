@@ -1,29 +1,56 @@
+// /*
+//   scroll down evet in index.html
+// */
+//
+// var scrollHeight = 0;
+// var oneContent = $('#one');
+// var twoContent = $('#two');
+// var threeContent = $('#three');
+//
+// var oneOffset, twoOffset, threeOffset;
+// oneOffset = oneContent.offset();
+// twoOffset = twoContent.offset();
+// threeOffset = threeContent.offset();
+//
+// $(window).resize(function() {
+//     // var winHeight = window.outerHeight;
+//     oneOffset = oneContent.offset();
+//     twoOffset = twoContent.offset();
+//     threeOffset = threeContent.offset();
+// })
+//
+// $(window).scroll(function() {
+//   scrollHeight = $(window).scrollTop();
+//   // console.log("scrollHeight: " + scrollHeight);
+// });
+//
+// $('.scroll-arrow-down').click(function() {
+//   // console.log(scrollHeight);
+//   if (scrollHeight >= oneOffset.top && scrollHeight < twoOffset.top) {
+//     $('html, body').animate({ scrollTop: twoOffset.top }, 'slow');
+//   } else if (scrollHeight >= twoOffset.top && scrollHeight <=threeOffset.top ) {
+//       $('html, body').animate({scrollTop: threeOffset.top}, 'slow');
+//   }
+// });
+//
+// $('.scroll-arrow-up').click(function() {
+//   // console.log(scrollHeight);
+//   if (scrollHeight > oneOffset.top && scrollHeight < threeOffset.top) {
+//     $('html, body').animate({ scrollTop: oneOffset.top }, 'slow');
+//   } else if (scrollHeight > twoOffset.top && scrollHeight < ) {
+//       $('html, body').animate({scrollTop: 794}, 'slow');
+//   }
+// });
+
 /*
-  scroll down evet in index.html
+  menu icon slide-out
 */
-var scrollHeight = 0;
-$(window).scroll(function() {
-  scrollHeight = $(window).scrollTop();
-  // console.log(scrollHeight);
-});
+$('#menu-icon').on('click', function(){
+  $('.content').toggleClass('side-bar-out');
+  $('.side-bar').toggleClass('side-bar-out');
+  $('#menu-icon').toggleClass('side-bar-out');
+})
 
-$('.scroll-arrow-down').click(function() {
-  console.log(scrollHeight);
-  if (scrollHeight < 777) {
-    $('html, body').animate({ scrollTop: 794 }, 'slow');
-  } else if (scrollHeight >= 777 && scrollHeight <=1500 ) {
-      $('html, body').animate({scrollTop: 1588}, 'slow');
-  }
-});
-
-$('.scroll-arrow-up').click(function() {
-  console.log(scrollHeight);
-  if (scrollHeight < 1000) {
-    $('html, body').animate({ scrollTop: 0 }, 'slow');
-  } else if (scrollHeight >= 1000 ) {
-      $('html, body').animate({scrollTop: 794}, 'slow');
-  }
-});
 
 /*
   Index page object
