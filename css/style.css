@@ -22,6 +22,7 @@ body{
 /*mini-side-bar*/
 .mini-side-bar {
 	display: none;
+	transition: 1s;
 }
 #menu-icon {
 	display: none;
@@ -51,6 +52,7 @@ body{
 	float: left;
 	padding: 10px 20px 10px 30px;
 	position:fixed;
+	transition: 1s;
 }
 
 
@@ -130,6 +132,7 @@ body{
 	float: left;
 	position: relative;
 	left:280px;
+	transition: 1s;
 }
 
 #one {
@@ -352,6 +355,7 @@ li div {
 	}
 	.side-bar {
 		left: -500px;
+		transition: 1s;
 	}
 	.mini-side-bar {
 		color: white;
@@ -377,9 +381,11 @@ li div {
 	.content.side-bar-in {
 		left: 280px;
 		width: 100%;
+		transition: 1s;
 	}
 	.side-bar.side-bar-in {
 		left: 0px;
+		transition: 1s;
 	}
 
 	/*index.html*/
