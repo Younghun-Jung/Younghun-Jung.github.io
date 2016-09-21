@@ -23,12 +23,21 @@ body{
 }
 #menu-icon {
 	display: none;
+	width:32px;
+	height:32px;
 }
 #menu-icon img {
-	width: 30px;
-	height: 30px;
+	width:100%;
 }
-
+#mini-name {
+	position: absolute;
+	color: white;
+	left: 45%;
+	top: 15%;
+	color:white;
+	font-weight: bold;
+	/*margin: 0 auto;*/
+}
 
 /* Side bar */
 .side-bar {
@@ -343,6 +352,7 @@ li div {
 		left: -500px;
 	}
 	.mini-side-bar {
+		color: white;
 		display: block;
 		position: fixed;
 		top: 0;
@@ -357,8 +367,9 @@ li div {
 		position: fixed;
 		display: block;
 		float: left;
-		top: 0;
+		top: 1%;
 		left: 0;
+		/*z-index: 1000;*/
 	}
 
 	.content.side-bar-in {
@@ -384,9 +395,19 @@ li div {
 	}
 
 	/*profile.html*/
-	.brief-profile {
-		display: block;
+	.profile-content {
+		width: 90%;
 	}
+	.profile-top {
+		width: 100%;
+		height: 400px;
+		display: block;
+		margin: 50px auto 70px auto;
+	}
+	.myImage {
+		float:none;
+	}
+
 }
 @media screen and (max-width: 1250px) {
 	.profile-top {
@@ -394,5 +415,8 @@ li div {
 		height: 400px;
 		display: block;
 		margin: 50px auto 70px auto;
+	}
+	.myImage {
+		float:none;
 	}
 }
