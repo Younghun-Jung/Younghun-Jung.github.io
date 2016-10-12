@@ -3,7 +3,8 @@
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 
-	font-family: 'Source Sans Pro', sans-serif;
+	/*font-family: 'Source Sans Pro', sans-serif;*/
+	font-family: 'Roboto', sans-serif;
 }
 
 /* Totl body */
@@ -22,7 +23,7 @@ body{
 /*mini-side-bar*/
 .mini-side-bar {
 	display: none;
-	transition: 1s;
+	transition: 0.5s;
 }
 #menu-icon {
 	display: none;
@@ -52,7 +53,7 @@ body{
 	float: left;
 	padding: 10px 20px 10px 30px;
 	position:fixed;
-	transition: 1s;
+	transition: 0.5s;
 }
 
 
@@ -132,7 +133,7 @@ body{
 	float: left;
 	position: relative;
 	left:280px;
-	transition: 1s;
+	transition: 0.5s;
 }
 
 #one {
@@ -215,7 +216,7 @@ body{
 }
 .title-2 {
 	font-size: 22px;
-	padding-bottom: 3px;
+	margin-bottom: 3px;
 	color: gray;
 }
 .profile-top {
@@ -342,6 +343,29 @@ li div {
 	float: right;
 }
 
+/*
+
+	Portfolio part
+
+*/
+.portfolio-content {
+  width: 70%;
+  margin: 60px auto;
+}
+
+.portfolio-entry {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.portfolio-detail {
+	width: 100%;
+}
+.project {
+
+}
+
+
 
 /*
 	Responsive display
@@ -355,7 +379,7 @@ li div {
 	}
 	.side-bar {
 		left: -500px;
-		transition: 1s;
+		transition: 0.5s;
 	}
 	.mini-side-bar {
 		color: white;
@@ -381,11 +405,11 @@ li div {
 	.content.side-bar-in {
 		left: 280px;
 		width: 100%;
-		transition: 1s;
+		transition: 0.5s;
 	}
 	.side-bar.side-bar-in {
 		left: 0px;
-		transition: 1s;
+		transition: 0.5s;
 	}
 
 	/*index.html*/
