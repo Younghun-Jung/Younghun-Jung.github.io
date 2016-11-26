@@ -3,12 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href='https://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'> -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"> -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-1.9.1.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
-
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 
@@ -18,8 +15,8 @@
     <!-- Main page wrapper  -->
     <div class="container">
 
-      <!--mini-side-bar-->
-      <div class="mini-side-bar">
+        <!--mini-side-bar-->
+        <div class="mini-side-bar">
         <!-- menu Icon -->
         <div id="menu-icon">
           <img src="./img/hamburger.png" alt="menu-icon">
@@ -27,90 +24,115 @@
         <div id="mini-name">
           Jung Younghun
         </div>
-      </div>
-
-      <!--side-bar-->
-      <div class="side-bar">
-
-        <!-- logo -->
-        <div id="logo">
-          <img src="./img/logo_3.png" alt="my logo">
         </div>
 
-        <div class="side-bar-contents">
-        </div>
+        <!--side-bar-->
+        <div class="side-bar">
 
-        <!-- menu navigation -->
-        <div id="nav">
-          <div class="menu" id="home"><a href="./index.html">HOME</a></div>
-          <div class="menu" id="profile"><a href="./profile.html">PROFILE</a></div>
-          <div class="menu" id="portfolio"><a href="./portfolio.html" style="color:cyan;">PORTFOLIO</a></div>
-          <div class="menu" id="self-study">SELF STUDY</div>
-          <div class="menu" id="contact">CONTACT</div>
-        </div>
-
-        <!--SNS-->
-        <div id="sns">
-          <p>Social Network</p>
-          <div class="sns-image">
-            <a href="https://www.facebook.com/younghun.jung.75" target="_blank"><img src="./img/facebook-24.png" alt="facebook mark"></a>
-            <a href="https://www.instagram.com/younghoneybutter/" target="_blank"><img src="./img/instagram-24.png" alt="instagram mark"></a>
-            <a href="https://github.com/Younghun-Jung" target="_blank"><img src="./img/github-24.png" alt="github mark"></a>
-            <a href="https://kr.linkedin.com/in/younghun-jung-51b807120" target="_blank"><img src="./img/linkedin-24.png" alt="linkedin mark"></a>
-          </div>
-        </div>
-
-        <!-- CopyRight -->
-        <div id="copyright">
-          Copyright 2016 <br>
-          By Younghun Jung
-        </div>
-      </div>
-
-      <!--content area-->
-      <div class="content">
-        <div class="portfolio-content">
-          <div class="project-entry">
-            <!-- Portfolio title -->
-            <div class="title-1">
-              PORTFOLIO
+            <!-- logo -->
+            <div id="logo">
+              <img src="./img/logo_3.png" alt="my logo">
             </div>
 
-            <!--Web-->
-            <div class="portfolio-entry">
-              <div class="title-2">
-                Web Development
-              </div>
-              <div class="portfolio-detail">
-                <div class="project"></div>
-                <div class="project"></div>
-                <div class="project"></div>
-              </div>
+            <!-- menu navigation -->
+            <div id="nav">
+              <div class="menu" id="home"><a href="./index.html">HOME</a></div>
+              <div class="menu" id="profile"><a href="./profile.html">PROFILE</a></div>
+              <div class="menu" id="portfolio"><a href="./portfolio.html" style="color:cyan;">PORTFOLIO</a></div>
+              <div class="menu" id="self-study">SELF STUDY</div>
+              <div class="menu" id="contact">CONTACT</div>
             </div>
 
-            <!--UX-->
-            <div class="portfolio-entry">
-              <div class="title-2">
-                UX Development
+            <!--SNS-->
+            <div class="side-bar-footer">
+               <div id="sns">
+                <p>Social Network</p>
+                <div class="sns-image">
+                  <a href="https://www.facebook.com/younghun.jung.75" target="_blank"><img src="./img/facebook-24.png" alt="facebook mark"></a>
+                  <a href="https://www.instagram.com/younghoneybutter/" target="_blank"><img src="./img/instagram-24.png" alt="instagram mark"></a>
+                  <a href="https://github.com/Younghun-Jung" target="_blank"><img src="./img/github-24.png" alt="github mark"></a>
+                  <a href="https://kr.linkedin.com/in/younghun-jung-51b807120" target="_blank"><img src="./img/linkedin-24.png" alt="linkedin mark"></a>
+                </div>
               </div>
-              <div class="portfolio-detail">
+
+              <!-- CopyRight -->
+              <div id="copyright">
+                Copyright 2016 <br>
+                By Younghun Jung
               </div>
             </div>
-
-            <!--Infoviz-->
-            <div class="portfolio-entry">
-              <div class="title-2">
-                Information Visualization
-              </div>
-              <div class="portfolio-detail">
-              </div>
-            </div>
-
-          </div>
         </div>
-      </div>
+        
+        <!-- title area -->
+        <!--Profile title-->
+          
+        <!--content area-->
+        <div class="content" ng-app="HomepageApp">
+            <div class="portfolio-content" ng-controller="portfolioCtrl as list">
+              <div class="title-1">
+                PROJECTS
+              </div>
+
+              <div class="row portfolio-top">
+                
+                <div class="col-sm-6 col-md-6 col-lg-4" ng-repeat="project in list.data">
+                  <div class="project well well-md">
+                    <div class="row">
+                      <div>
+                        <img class="img-responsive project-image" ng-src="{{project.img_title_URL}}" alt="project-1-image">    
+                      </div>
+                      <hr>
+                      <div class="project-body">
+                        <h3>{{project.title}}</h3>
+                        <p><strong>Date: </strong><span>{{project.date}}</span></p>
+                        <p><strong>Category: </strong><span ng-repeat="cate in project.category">{{cate}} </span></p>
+                        <p><strong>Type: </strong><span>{{project.type}}</span></p>
+                        <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#project-info" ng-click="list.changeActiveProject(project)">More Details</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+
+              <div class="modal fade" id="project-info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">{{list.activeProject.popup_title}}</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p><strong>Date: </strong><span>{{list.activeProject.date}}</span></p>
+                          <p><strong>Category: </strong><span ng-repeat="category in list.activeProject.category">{{category}} </span></p>
+                          <p><strong>Type: </strong><span>{{list.activeProject.type}}</span></p>
+                          <p><strong>Role: </strong><span>{{list.activeProject.role}}</span></p>
+                          <p><strong>Github: </strong><a ng-href="{{list.activeProject.github}}" target="_blank"><span>{{list.activeProject.github}}</span></a></p>
+                          <p>{{list.activeProject.description}}</p>
+                          <div class="project-content-image" 
+                                ng-class="{'col-md-12': list.activeProject.contents.length==1, 'col-md-4':list.activeProject.contents.length%2==1 && list.activeProject.contents.length > 1, 'col-md-6':list.activeProject.contents.length%2 == 0 && list.activeProject.contents.length > 1}" 
+                                ng-repeat="content in list.activeProject.contents">
+                            <img class="img-responsive" ng-src="{{content.url}}" alt="project1-1-image">
+                            <h5>{{content.title}}</h5>  
+                          </div> 
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+        
+        </div>
     </div>
+    
 
-    <script type="text/javascript" src="./js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
+    <script type="text/javascript" src="./js/portfolio_app.js"></script>
+    <script type="text/javascript" src="./js/controller/portfolio.js"></script>
+    <script type="text/javascript" src="./js/factories/dataservice.js"></script>
+    
   </body>
 </html>

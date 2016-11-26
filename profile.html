@@ -3,10 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href='https://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'> -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"> -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-1.9.1.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
@@ -43,17 +41,23 @@
           <div class="menu" id="contact">CONTACT</div>
         </div>
 
-        <div id="sns">
-          Social Network <br><br><br>
-          <a href="https://www.facebook.com/younghun.jung.75" target="_blank"><img src="./img/facebook-24.png" alt="facebook mark"></a>
-          <a href="https://www.instagram.com/younghoneybutter/" target="_blank"><img src="./img/instagram-24.png" alt="instagram mark"></a>
-          <a href="https://github.com/Younghun-Jung" target="_blank"><img src="./img/github-24.png" alt="github mark"></a>
-          <a href="https://kr.linkedin.com/in/younghun-jung-51b807120" target="_blank"><img src="./img/linkedin-24.png" alt="linkedin mark"></a>
-        </div>
+        <!--SNS-->
+        <div class="side-bar-footer">
+           <div id="sns">
+            <p>Social Network</p>
+            <div class="sns-image">
+              <a href="https://www.facebook.com/younghun.jung.75" target="_blank"><img src="./img/facebook-24.png" alt="facebook mark"></a>
+              <a href="https://www.instagram.com/younghoneybutter/" target="_blank"><img src="./img/instagram-24.png" alt="instagram mark"></a>
+              <a href="https://github.com/Younghun-Jung" target="_blank"><img src="./img/github-24.png" alt="github mark"></a>
+              <a href="https://kr.linkedin.com/in/younghun-jung-51b807120" target="_blank"><img src="./img/linkedin-24.png" alt="linkedin mark"></a>
+            </div>
+          </div>
 
-        <div id="copyright">
-          Copyright 2016 <br>
-          By Younghun Jung
+          <!-- CopyRight -->
+          <div id="copyright">
+            Copyright 2016 <br>
+            By Younghun Jung
+          </div>
         </div>
       </div>
 
@@ -65,15 +69,16 @@
           <div class="title-1">
             PROFILE
           </div>
-
-          <!-- Profile image -->
-          <div class="profile-top">
-            <div class="myImage">
-              <img class="img-responsive" src="./img/myImg.jpeg" alt="My Image">
+  
+          <!-- Top-contents -->
+          <div class="row profile-top">
+            <!-- Profile image -->
+            <div class="col-md-4 col-lg-3 myImage">
+              <img class="profile-image" src="./img/myImg.jpeg" alt="My Image">
             </div>
 
             <!-- breif content -->
-            <div class="brief-profile">
+            <div class="col-md-8 col-lg-9 brief-profile">
               <ul>
                 <li>
                   <span class="brief-profile-title">name</span>
