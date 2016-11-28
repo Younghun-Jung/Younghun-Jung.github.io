@@ -46,7 +46,6 @@ body{
 
 /* Side bar */
 .side-bar {
-	margin-top:15px;
 	width: 280px;
 	height: 100%;
 	overflow: hidden;
@@ -63,7 +62,9 @@ body{
 	top:10px;
 	left:20px;
 }*/
-
+#logo {
+	margin-top:15px;
+}
 #logo, #logo img {
 	width: 230px;
 	/*height: 230px;*/
