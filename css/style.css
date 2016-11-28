@@ -46,6 +46,7 @@ body{
 
 /* Side bar */
 .side-bar {
+	margin-top:15px
 	width: 280px;
 	height: 100%;
 	overflow: hidden;
@@ -448,7 +449,6 @@ li div {
 	}
 
 	.content.side-bar-in {
-		margin-top:15px;
 		left: 280px;
 		width: 100%;
 		transition: 0.5s;
