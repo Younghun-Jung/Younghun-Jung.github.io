@@ -54,6 +54,8 @@ body{
 	float: left;
 	padding: 10px 20px 10px 30px;
 	position:fixed;
+	top:0;
+	left:0;
 	transition: 0.5s;
 }
 
@@ -401,8 +403,6 @@ li div {
 */
 
 @media screen and (max-width: 1920px) {
-
-
 	/*portfolio.html*/
 	.project {
 		min-height:450px;
@@ -465,6 +465,7 @@ li div {
 	.side-bar.side-bar-in {
 		left: 0px;
 		transition: 0.5s;
+		position:fixed;
 	}
 
 	/*index.html*/
