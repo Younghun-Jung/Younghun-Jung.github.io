@@ -467,6 +467,13 @@ li div {
 		transition: 0.5s;
 		position:fixed;
 	}
+	#sns {
+		width: 100%;
+		/*height: 100px;*/
+		color: gray;
+		margin-bottom: 80px;
+		font-size: 14px;
+	}
 
 	/*index.html*/
 	#one, #two, #three{
