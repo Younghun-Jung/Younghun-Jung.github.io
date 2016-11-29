@@ -17,7 +17,7 @@ body{
 .container {
 	margin: 0 auto;
 	width: 100%;
-	height: 100vh;
+	height: auto;
 	padding: 0;
 }
 
@@ -143,7 +143,7 @@ body{
 */
 .content {
 	width: calc(100% - 240px);
-	height: 100vh;
+	height: 100%;
 	float: left;
 	position: relative;
 	left:240px;
@@ -369,7 +369,17 @@ li div {
 	font-weight: 200 !important;
 	color: #595957;
 }
+
+.project-search{
+	margin-top:20px;
+}
+.project-search span {
+	margin-right:10px;
+}
+
+
 .project {
+	background-color: rgba(167, 167, 167, 0.03);
 	min-height:400px;
 	position: relative;
 }
@@ -386,6 +396,16 @@ li div {
 }
 .modal-body {
 	overflow: auto;
+}
+.project-body button {
+	background-color: rgba(181, 181, 181, 0);
+    border-color: gray;
+    color: gray;
+}
+.project-body>button:hover, .project-body>button:focus, .project-body>button:active{
+	background-color: #f54e4e;
+    border-color: #f54e4e;
+    color: white;
 }
 
 
@@ -519,10 +539,13 @@ li div {
 	}
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
 	.project {
 		min-height:300px;
 		position: relative;
+	}
+	.project-search span{
+		display:none;
 	}
 	#mini-name {
 		left: 30%;

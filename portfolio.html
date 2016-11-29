@@ -75,9 +75,14 @@
                 PROJECTS
               </div>
 
+              <form class="project-search form-inline well well-sm clearfix">
+                  <span class="glyphicon glyphicon-search"></span>
+                  <input type="text" placeholder="Search..." class="form-control" ng-model="list.search">
+              </form>
+
               <div class="row portfolio-top">
                 
-                <div class="col-sm-6 col-md-6 col-lg-4" ng-repeat="project in list.data">
+                <div class="col-sm-6 col-md-6 col-lg-4" ng-repeat="project in list.data | filter:list.search">
                   <div class="project well well-md">
                     <div class="row">
                       <div>
