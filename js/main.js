@@ -11,20 +11,43 @@ $('#menu-icon').on('click', function(){
 var Index = {
   "description": [
     {
-      "name": "Web Developer",
-      "des": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero facere inventore voluptatibus ipsum minima. Ipsa repellendus pariatur quis, veniam distinctio itaque vitae eum doloremque suscipit harum tempore dignissimos officia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde laudantium aperiam molestias, at ipsam! Magnam eveniet, assumenda labore nemo dignissimos quaerat expedita ex facere laboriosam dolore vero quasi eius, debitis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. "
+      "name": "Front-End Web Development",
+      "des": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
     },
     {
       "name": "UX Developer",
-      "des": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero facere inventore voluptatibus ipsum minima. Ipsa repellendus pariatur quis, veniam distinctio itaque vitae eum doloremque suscipit harum tempore dignissimos officia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde laudantium aperiam molestias, at ipsam! Magnam eveniet, assumenda labore nemo dignissimos quaerat expedita ex facere laboriosam dolore vero quasi eius, debitis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. "
+      "des": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
     },
     {
       "name": "Information Visualization",
-      "des": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero facere inventore voluptatibus ipsum minima. Ipsa repellendus pariatur quis, veniam distinctio itaque vitae eum doloremque suscipit harum tempore dignissimos officia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde laudantium aperiam molestias, at ipsam! Magnam eveniet, assumenda labore nemo dignissimos quaerat expedita ex facere laboriosam dolore vero quasi eius, debitis. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+      "des": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
     }
   ],
   "display" : function() {
     $('#one h2').text(Index.description[0].name);
+    
+    for(var i=0; i<Index.description.length; i++){
+      $(".index-description").css("background", "url(../img/top-image_"+(i+1)+") no-repeat fixed 50% 50%")
+      for(var j=0; j<index.description[i].des.length; j++){
+        
+      }
+    }
+    url("../img/top-image_1.jpg") 
     $('#one p').text(Index.description[0].des);
     $('#two h2').text(Index.description[1].name);
     $('#two p').text(Index.description[1].des);
