@@ -474,6 +474,10 @@ li div {
 		margin-bottom: 80px;
 		font-size: 14px;
 	}
+	.sns-image {
+		overflow: hidden;
+		margin-top: 10px;
+	}
 
 	/*index.html*/
 	#one, #two, #three{
