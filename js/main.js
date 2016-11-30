@@ -8,6 +8,38 @@ $('#menu-icon').on('click', function(){
 /*
   Index page object
 */
+
+$(window).resize(function(){
+    if($(window).width() <= 992){
+        // $("body").off("hover", ".index-description-box");
+        $(".index-description-box").hover(
+            function(){
+                $(".after").css("width", "40px").css("margin-left", "-20px");
+                $(this).css("width", "100%").siblings().css("width", "100%");
+                $(".index-description-text p").css("display", "block");
+            },
+            function(){
+                $(".after").css("width", "40px").css("margin-left", "-20px");
+                $(this).css("width", "100%").siblings().css("width", "100%");
+            }
+        );
+    }else{
+        $(".index-description-box").hover(
+            function(){
+                $(this).find(".after").css("width", "70%").css("margin-left", "-35%");
+                $(this).css("width", "50%").siblings().css("width", "25%");
+                $(this).find(".index-description-text").css("margin-top", "30%");
+                $(this).find("p").css("display", "block")
+                       .parent().parent().parent().siblings().find("p").css("display", "none");
+            },
+            function(){
+                $(".after").css("width", "40px").css("margin-left", "-20px");
+                $(this).css("width", "33.3333%").siblings().css("width", "33.3333%");
+            }
+        );
+    }
+});
+
 var Index = {
   "description": [
     {
@@ -17,7 +49,8 @@ var Index = {
         "_HTML, CSS, JavaScript간 상호작용을 파악",
         "_요소 및 기능에 대해 동적 생성/수정/스타일링",
         "_Back-End Communication을 포함한 Light Back-end 작업"
-      ]
+      ],
+      "pos_css":"center left"
     },
     {
       "name": "UX Developer",
@@ -26,7 +59,8 @@ var Index = {
         "_사용자 경험을 고려한 인간 중심 개발",
         "_사용자의 사용성과 접근성 증진을 도모",
         "_사용자 조사를 통한 개발과 테스트 포함"
-      ]
+      ],
+      "pos_css":"center center"
     },
     {
       "name": "Information Visualization",
@@ -35,18 +69,32 @@ var Index = {
           "_정보 조직화 및 구조화",
           "_정보 시각화 및 사용자 인터페이스를 디자인",
           "_인터페이스를 활용한 상호작용 방안 모색"
-      ]
+      ],
+      "pos_css":"center right"
     }
   ],
   "display" : function() {
-    $('#one h2').text(Index.description[0].name);
-
     for(var i=0; i<Index.description.length; i++){
-      $(".index-description-box").eq(i).css("background", "url(./img/top-image_"+(i+1)+".jpg) no-repeat fixed")
-      $(".index-description-box").eq(i).find(".index-description-area h2").text(Index.description[i].name);
-      for(var j=0; j<Index.description[i].des.length; j++){
-        $(".index-description-box").eq(i).find(".index-description-area p").eq(j).text(Index.description[i].des[j]);
-      }
+        $(".index-description-box").eq(i).css("background", "url(./img/top-image_"+(i+1)+".jpg) "+Index.description[i].pos_css +" no-repeat fixed");
+        $(".index-description-box").eq(i).find(".index-description-area h2").text(Index.description[i].name);
+        for(var j=0; j<Index.description[i].des.length; j++){
+            $(".index-description-box").eq(i).find(".index-description-area p").eq(j).text(Index.description[i].des[j]);
+        }
+    }
+    if($(window).width>992){
+        $(".index-description-box").hover(
+            function(){
+                $(this).find(".after").css("width", "70%").css("margin-left", "-35%");
+                $(this).css("width", "50%").siblings().css("width", "25%");
+                $(this).find(".index-description-text").css("margin-top", "30%");
+                $(this).find("p").css("display", "block")
+                       .parent().parent().parent().siblings().find("p").css("display", "none");
+            },
+            function(){
+                $(".after").css("width", "40px").css("margin-left", "-20px");
+                $(this).css("width", "33.3333%").siblings().css("width", "33.3333%");
+            }
+        );
     }
   }
 }

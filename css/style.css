@@ -143,90 +143,59 @@ body{
 */
 .content {
 	width: calc(100% - 240px);
+	/*width:100%;*/
 	height: 100vh;
 	/*float: left;*/
 	position: relative;
-	left:240px;
+	left: 240px;
 	transition: 0.5s;
 }
 
-
-/*#one {
-	width:100%;
-	height: 100%;
-	background: url("../img/top-image_1.jpg") no-repeat fixed 50% 50%;
-	background-size: cover;
-}
-#two {
-	width:100%;
-	height: 100%;
-	background: url("../img/top-image_2.jpg") no-repeat fixed 50% 50%;
-	background-size: cover;
-}
-#three {
-	width:100%;
-	height: 100%;
-	background: url("../img/top-image_3.png") no-repeat fixed 50% 50%;
-	background-size: cover;
-}
-#one, #two, #three {
-	padding-top: 150px;
-}*/
-
 .index-description-box{
-	width: 100%;
-	height: 100vh;
-	display: inline-table;
+	width:33.3333%;
+	position: relative;
+	float:left;
+	height:100vh;
+	padding:0;
 	background-size: contain;
+	transition: width 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .index-description-area {
 	width: 100%;
+	height:100vh;
+	padding:0;
 	margin: 0 auto;
-	display:table-cell;
-	vertical-align: middle;
-	/*text-align: center;*/
 	color: white;
 	padding: 10px;
 	line-height: 2em;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.6);
 }
-.index-description-text{
-	margin-left: 30%;
+
+.index-description-text {
+	margin-top:40%;
+}
+.index-description-text .after{
+	width:40px;
+	height: 1px;
+	position: absolute;
+	left: 50%;
+	background: red;
+	content: '';
+	margin-left: -20px;
+	transition: width 0.4s cubic-bezier(0.215, 0.61, 0.355, 1), margin-left 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.after_effect {
+	width: 120%;
+	margin-left: -250px;
 }
 .index-description-text h2{
-	font-size: 40px;
+	font-size: 30px;
+	text-align: center;
+	font-weight: 100;
 }
 .index-description-text p{
 	font-size: 20px;
-}
-
-/*.index-description {
-	width: 30%;
-	height: 70%;
-	float: left;
-	color: white;
-	margin: 0 auto;
-	margin-top: 100px;
-	padding: 5px;
-	font-size: 18px;
-	background-color: rgba(0, 0, 0,0.85);
-}*/
-
-.scroll-arrow-up {
-	/*position: absolute;*/
-	width: 50px;
-	display: block;
-	margin: 0 auto 0 auto;
-	cursor: pointer;
-}
-.scroll-arrow-down {
-	display: block;
-	margin: 0 auto;
-	margin-top: 25px;
-	width: 50px;
-	/*top: 450px;
-	left: 490px;*/
-	cursor: pointer;
+	display:none;
 }
 
 
@@ -517,16 +486,17 @@ li div {
 	}
 
 	/*index.html*/
-	#one, #two, #three{
-		padding-top: 30%;
+	.content{
 	}
-	.index-description-area {
-		width: 80%;
+	.index-description-box{
+		width: 100%;
+		float:left;
 	}
 	.index-description-area h2{
 		font-size: 14px;
 	}
 	.index-description-area p{
+		display: block;
 		font-weight: 100 !important;
 		font-size: 12px;
 	}
