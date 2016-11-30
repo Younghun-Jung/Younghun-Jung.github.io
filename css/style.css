@@ -427,6 +427,15 @@ profile-content li div {
 	}
 }
 @media screen and (max-width: 1600px){
+	.index-description-area h2{
+		font-size: 28px;
+	}
+	.index-description-area p{
+		display: block;
+		font-weight: 100 !important;
+		font-size: 17px;
+		margin-left: 15%;
+	}
 	/*portfolio.html*/
 	.project {
 		min-height:420px;
@@ -435,7 +444,15 @@ profile-content li div {
 }
 @media screen and (max-width: 1200px) {
 
-
+	.index-description-area h2{
+		font-size: 25px;
+	}
+	.index-description-area p{
+		display: block;
+		font-weight: 100 !important;
+		font-size: 14px;
+		margin-left: 10%;
+	}
 	/*portfolio.html*/
 	.project {
 		min-height:400px;
@@ -498,19 +515,20 @@ profile-content li div {
 
 	/*index.html*/
 	.content{
+		overflow:hidden;
 	}
 	.index-description-box{
 		width: 100%;
 		float:left;
 	}
 	.index-description-area h2{
-		font-size: 19px;
+		font-size: 28px;
 	}
 	.index-description-area p{
 		display: block;
 		font-weight: 100 !important;
-		font-size: 14px;
-		margin-left: 15%;
+		font-size: 17px;
+		margin-left: 28%;
 	}
 
 	/*profile.html*/
@@ -533,8 +551,17 @@ profile-content li div {
 }
 
 @media screen and (max-width: 768px) {
-	.index-description-text{
+	/*.index-description-text{
 		margin-left: 20%%;
+	}*/
+	.index-description-area h2{
+		font-size: 28px;
+	}
+	.index-description-area p{
+		display: block;
+		font-weight: 100 !important;
+		font-size: 17px;
+		margin-left: 25%;
 	}
 
 	#mini-name {
@@ -545,7 +572,7 @@ profile-content li div {
 
 @media screen and (max-width: 420px) {
 	.index-description-text{
-		margin-left: 15%;
+		margin-left: 7%;
 	}
 	.project {
 		min-height:300px;

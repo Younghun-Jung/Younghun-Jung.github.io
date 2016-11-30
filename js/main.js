@@ -24,7 +24,7 @@ var Index = {
     {
       "name": "UX Developer",
       "des": [
-        "_사용자와 제품, 서비스 및 시스템 간의 효율적인 상호 작용",
+        "_사용자와 서비스 및 시스템 간의 효율적인 상호 작용",
         "_사용자 경험을 고려한 인간 중심 개발",
         "_사용자의 사용성과 접근성 증진을 도모",
         "_사용자 조사를 통한 개발과 테스트 포함"
@@ -59,7 +59,7 @@ var Index = {
     if(window.innerWidth > 992){
         $(".index-description-box").hover(
             function(){
-                $(this).find(".after").css("width", "70%").css("margin-left", "-35%");
+                $(this).find(".after").css("width", "80%").css("margin-left", "-40%");
                 $(this).css("width", "50%").siblings().css("width", "25%");
                 $(this).find(".index-description-text").css("margin-top", "30%");
                 $(this).find("p").css("display", "block").parent().parent().parent().siblings().find("p").css("display", "none");
