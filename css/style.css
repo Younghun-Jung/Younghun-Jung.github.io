@@ -101,6 +101,12 @@ body{
 	border-bottom-color: #ddd;
 }
 
+#nav .fa {
+	color: black;
+	margin-left: 100px;
+}
+
+
 .side-bar-footer {
 	position: absolute;
 	bottom: 0;
@@ -139,7 +145,7 @@ body{
 
 
 /*
-		index.html Content
+		area.html Content
 */
 .content {
 	width: calc(100% - 240px);
