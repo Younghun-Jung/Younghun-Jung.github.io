@@ -206,6 +206,7 @@ body{
 	position: absolute;
 	bottom: 15px;
 	left: 50%;
+	margin-left:-15px;
 }
 .index-ul {
 	list-style-type: none;

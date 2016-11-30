@@ -69,7 +69,7 @@
       </div>
 
       <!--content area-->
-      <div class="content content-hidden">
+      <div id="idx-content" class="content content-hidden">
         <ul class="index-ul">
           <li id="front_dev" class="index-description-box">
             <div class="index-description-area">
@@ -116,9 +116,9 @@
     </div>
     
     <script>
-      $(".index_ul a").smoothScroll({
+      $("#idx-content a").smoothScroll({
         offset:0,
-        speed: 200
+        speed: 600
       })
     </script>
     <script type="text/javascript" src="./js/main.js"></script>
