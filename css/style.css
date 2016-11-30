@@ -585,6 +585,7 @@ profile-content li div {
 @media screen and (max-width: 420px) {
 	.index-description-text p{
 		margin-left: 7%;
+		font-size:15px;
 	}
 	.project {
 		min-height:430px;
