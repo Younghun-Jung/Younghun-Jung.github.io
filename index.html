@@ -9,118 +9,29 @@
     <script src="https://code.jquery.com/jquery-1.9.1.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
     <script src="./js/external/jquery.smooth-scroll.min.js"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
   </head>
 
   <body>
-    <!-- Main page wrapper  -->
-    <div class="container">
+      <div class="index-body">
 
-      <!--mini-side-bar-->
-      <div class="mini-side-bar">
-        <!-- menu Icon -->
-        <div id="menu-icon">
-          <img src="./img/hamburger.png" alt="menu-icon">
-        </div>
-        <div id="mini-name">
-          Jung Younghun
-        </div>
-      </div>
+      <div>
+          <h1> Front-end Developer </br> Jung Younghun</h1>
+          <div class="shortcut">
 
-      <!--side-bar-->
-      <div class="side-bar">
+              <a class="shortcut_link" href="./area.html" target="_blank">
+                  <img src="./img/icon_homepage.png" alt="icon_homepage"></img>
+                  <span class="shortcut_title">HOMEPAGE</span>
+              </a>
+              <a class="shortcut_link" href="https://github.com/Younghun-Jung" target="_blank">
+                  <img src="./img/icon_github.jpg" alt="icon_homepage"></img>
+                  <span class="shortcut_title">GITHUB</span>
+              </a>
 
-        <!-- logo -->
-        <div id="logo">
-          <img src="./img/logo_3.png" alt="my logo">
-        </div>
-
-        <div class="side-bar-contents">
-        </div>
-
-        <!-- menu navigation -->
-        <div id="nav">
-          <div class="menu" id="home"><a href="./index.html" style="color:#f54e4e;">HOME</a></div>
-          <div class="menu" id="profile"><a href="./profile.html">PROFILE</a></div>
-          <div class="menu" id="portfolio"><a href="./portfolio.html">PORTFOLIO</a></div>
-          <div class="menu" id="self-study"><a href="./selfstudy.html">SELF-STUDY</a></div>
-          <div class="menu" id="contact"><a href="./contact.html">CONTACT</a></div>
-        </div>
-
-        <!--SNS-->
-        <div class="side-bar-footer">
-           <div id="sns">
-            <p>Social Network</p>
-            <div class="sns-image">
-              <a href="https://www.facebook.com/younghun.jung.75" target="_blank"><img src="./img/facebook-24.png" alt="facebook mark"></a>
-              <a href="https://www.instagram.com/younghoneybutter/" target="_blank"><img src="./img/instagram-24.png" alt="instagram mark"></a>
-              <a href="https://github.com/Younghun-Jung" target="_blank"><img src="./img/github-24.png" alt="github mark"></a>
-              <a href="https://kr.linkedin.com/in/younghun-jung-51b807120" target="_blank"><img src="./img/linkedin-24.png" alt="linkedin mark"></a>
-            </div>
           </div>
-
-          <!-- CopyRight -->
-          <div id="copyright">
-            Copyright 2016 <br>
-            By Younghun Jung
-          </div>
-        </div>
-
       </div>
 
-      <!--content area-->
-      <div id="idx-content" class="content content-hidden">
-        <ul class="index-ul">
-          <li id="front_dev" class="index-description-box">
-            <div class="index-description-area">
-              <div class="index-description-text">
-                  <h2></h2><br>
-                  <span class="after"></span>
-                  <p></p>
-                  <p></p>
-                  <p></p>
-                  <p></p>
-              </div>
-              <a href="#ux_dev"><img src="./img/down_arrow_circle.png" alt="down_arrow"></a>
-            </div>
-          </li>
-          <li id="ux_dev" class="index-description-box">
-            <div class="index-description-area">
-              <div class="index-description-text">
-                  <h2></h2><br>
-                  <span class="after"></span>
-                  <p></p>
-                  <p></p>
-                  <p></p>
-                  <p></p>
-              </div>
-              <a href="#info_dev"><img src="./img/down_arrow_circle.png" alt="down_arrow"></a>
-            </div>
-          </li>
-          <li id="info_dev" class="index-description-box">
-            <div class="index-description-area">
-              <div class="index-description-text">
-                  <h2></h2><br>
-                  <span class="after"></span>
-                  <p></p>
-                  <p></p>
-                  <p></p>
-                  <p></p>
-              </div>
-              <a href="#front_dev"><img src="./img/up_arrow_circle.png" alt="up_arrow"></a>
-            </div>
-          </li>
-        </ul>
+  </div>
 
-      </div>
-    </div>
-    
-    <script>
-      $("#idx-content a").smoothScroll({
-        offset:0,
-        speed: 600
-      })
-    </script>
-    <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>

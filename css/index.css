@@ -1,0 +1,40 @@
+.index-body {
+    width: 100%;
+    height: 100vh;
+    background-color: #fbfbfb;
+    display: table;
+}
+.index-body>div {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 2.5em;
+    text-align: center;
+    padding-bottom: 20%;
+}
+.shortcut {
+    display: block;
+}
+.shortcut_link {
+    display: inline-block;
+    font-size: 14px;
+}
+.shortcut_link:nth-child(1) {
+    margin-right:70px;
+}
+.shortcut_link:nth-child(1)> img {
+    width: 60px;
+    padding-top: 11px;
+    display: block;
+    margin: 0 auto;
+}
+.shortcut_link:nth-child(2)> img {
+    width: 54px;
+    padding-bottom: 20px;
+    display:block;
+    margin: 0 auto;
+}
+.shortcut_title {
+    font-size: 15px;
+    margin: 0 auto;
+    text-decoration: none;
+}

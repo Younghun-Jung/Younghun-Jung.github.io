@@ -33,12 +33,12 @@
 
             <!-- logo -->
             <div id="logo">
-              <img src="./img/logo_3.png" alt="my logo">
+              <a href="./index.html"><img src="./img/logo_3.png" alt="my logo"></a>
             </div>
 
             <!-- menu navigation -->
             <div id="nav">
-              <div class="menu" id="home"><a href="./index.html">HOME</a></div>
+              <div class="menu" id="home"><a href="./area.html">HOME</a></div>
               <div class="menu" id="profile"><a href="./profile.html">PROFILE</a></div>
               <div class="menu" id="portfolio"><a href="./portfolio.html" style="color:#f54e4e;">PORTFOLIO</a></div>
               <div class="menu" id="self-study"><a href="./selfstudy.html">SELF-STUDY</a></div>
@@ -64,10 +64,10 @@
               </div>
             </div>
         </div>
-        
+
         <!-- title area -->
         <!--Profile title-->
-          
+
         <!--content area-->
         <div class="content" ng-app="HomepageApp">
             <div class="portfolio-content" ng-controller="portfolioCtrl as list">
@@ -81,12 +81,12 @@
               </form>
 
               <div class="row portfolio-top">
-                
+
                 <div class="col-sm-6 col-md-6 col-lg-4" ng-repeat="project in list.data | filter:list.search">
                   <div class="project well well-md">
                     <div class="row">
                       <div>
-                        <img class="img-responsive project-image" ng-src="{{project.img_title_URL}}" alt="project-1-image">    
+                        <img class="img-responsive project-image" ng-src="{{project.img_title_URL}}" alt="project-1-image">
                       </div>
                       <hr>
                       <div class="project-body">
@@ -99,7 +99,7 @@
                     </div>
                   </div>
                 </div>
-                
+
               </div>
 
               <div class="modal fade" id="project-info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -115,12 +115,12 @@
                           <p><strong>Role: </strong><span>{{list.activeProject.role}}</span></p>
                           <p><strong>Github: </strong><a ng-href="{{list.activeProject.github}}" target="_blank"><span>{{list.activeProject.github}}</span></a></p>
                           <p>{{list.activeProject.description}}</p>
-                          <div class="project-content-image" 
-                                ng-class="{'col-md-12': list.activeProject.contents.length==1, 'col-md-4':list.activeProject.contents.length%2==1 && list.activeProject.contents.length > 1, 'col-md-6':list.activeProject.contents.length%2 == 0 && list.activeProject.contents.length > 1}" 
+                          <div class="project-content-image"
+                                ng-class="{'col-md-12': list.activeProject.contents.length==1, 'col-md-4':list.activeProject.contents.length%2==1 && list.activeProject.contents.length > 1, 'col-md-6':list.activeProject.contents.length%2 == 0 && list.activeProject.contents.length > 1}"
                                 ng-repeat="content in list.activeProject.contents">
                             <img class="img-responsive" ng-src="{{content.url}}" alt="project1-1-image">
-                            <h5>{{content.title}}</h5>  
-                          </div> 
+                            <h5>{{content.title}}</h5>
+                          </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -131,16 +131,16 @@
 
 
             </div>
-        
+
         </div>
     </div>
-    
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
     <script type="text/javascript" src="./js/portfolio_app.js"></script>
     <script type="text/javascript" src="./js/controller/portfolio.js"></script>
     <script type="text/javascript" src="./js/factories/dataservice.js"></script>
-    
+
   </body>
 </html>
