@@ -19,7 +19,8 @@ var Index = {
         "_요소 및 기능에 대해 동적 생성/수정/스타일링",
         "_Back-End Communication을 포함한 Light Back-end 작업"
       ],
-      "pos_css":"left center"
+      "pos_css":"left center",
+      "pos_css_res" : "top left"
     },
     {
       "name": "UX Developer",
@@ -29,7 +30,8 @@ var Index = {
         "_사용자의 사용성과 접근성 증진을 도모",
         "_사용자 조사를 통한 개발과 테스트 포함"
       ],
-      "pos_css":"center center"
+      "pos_css":"center center",
+      "pos_css_res" : "center left"
     },
     {
       "name": "Information Visualization",
@@ -39,7 +41,8 @@ var Index = {
           "_정보 시각화 및 사용자 인터페이스를 디자인",
           "_인터페이스를 활용한 상호작용 방안 모색"
       ],
-      "pos_css":"right center"
+      "pos_css":"right center",
+      "pos_css_res" : "bottom left"
     }
   ],
   "display" : function() {
@@ -47,7 +50,7 @@ var Index = {
         if(window.innerWidth>992){
             $(".index-description-box").eq(i).css("background", "url(./img/top-image_"+(i+1)+".jpg) "+Index.description[i].pos_css +" no-repeat fixed");
         }else{
-            $(".index-description-box").eq(i).css("background", "url(./img/top-image_"+(i+1)+".jpg) left top no-repeat fixed");
+            $(".index-description-box").eq(i).css("background", "url(./img/top-image_"+(i+1)+".jpg) "+Index.description[i].pos_css_res +" no-repeat fixed");
         }
         
         $(".index-description-box").eq(i).find(".index-description-area h2").text(Index.description[i].name);
