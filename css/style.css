@@ -514,8 +514,8 @@ profile-content li div {
 	}
 
 	/*index.html*/
-	.content{
-		overflow:hidden;
+	.content.content-hidden{
+		/*overflow:hidden;*/
 	}
 	.index-description-box{
 		width: 100%;
