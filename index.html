@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-1.9.1.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
+    <script src="./js/external/jquery.smooth-scroll.min.js"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
   </head>
@@ -70,7 +71,7 @@
       <!--content area-->
       <div class="content content-hidden">
         <ul class="index-ul">
-          <li class="index-description-box">
+          <li id="front_dev" class="index-description-box">
             <div class="index-description-area">
               <div class="index-description-text">
                   <h2></h2><br>
@@ -80,9 +81,10 @@
                   <p></p>
                   <p></p>
               </div>
+              <a href="#ux_dev"><img src="./img/down_arrow_circle.png" alt="down_arrow"></a>
             </div>
           </li>
-          <li class="index-description-box">
+          <li id="ux_dev" class="index-description-box">
             <div class="index-description-area">
               <div class="index-description-text">
                   <h2></h2><br>
@@ -92,9 +94,10 @@
                   <p></p>
                   <p></p>
               </div>
+              <a href="#info_dev"><img src="./img/down_arrow_circle.png" alt="down_arrow"></a>
             </div>
           </li>
-          <li class="index-description-box">
+          <li id="info_dev" class="index-description-box">
             <div class="index-description-area">
               <div class="index-description-text">
                   <h2></h2><br>
@@ -104,13 +107,20 @@
                   <p></p>
                   <p></p>
               </div>
+              <a href="#front_dev"><img src="./img/up_arrow_circle.png" alt="up_arrow"></a>
             </div>
           </li>
         </ul>
 
       </div>
     </div>
-
+    
+    <script>
+      $(".index_ul a").smoothScroll({
+        offset:0,
+        speed: 200
+      })
+    </script>
     <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>

@@ -200,6 +200,13 @@ body{
 	margin-left: 20%;
 	display:none;
 }
+.index-description-area img{
+	display: none;
+	width: 30px;
+	position: absolute;
+	bottom: 15px;
+	left: 50%;
+}
 .index-ul {
 	list-style-type: none;
 	padding:0;
@@ -530,6 +537,10 @@ profile-content li div {
 		font-size: 17px;
 		margin-left: 28%;
 	}
+	.index-description-area img {
+		display: block;
+	}
+
 
 	/*profile.html*/
 	.profile-content {
