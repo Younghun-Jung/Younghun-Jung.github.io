@@ -9,37 +9,6 @@ $('#menu-icon').on('click', function(){
   Index page object
 */
 
-$(window).resize(function(){
-    if($(window).width() <= 992){
-        // $("body").off("hover", ".index-description-box");
-        $(".index-description-box").hover(
-            function(){
-                $(".after").css("width", "40px").css("margin-left", "-20px");
-                $(this).css("width", "100%").siblings().css("width", "100%");
-                $(".index-description-text p").css("display", "block");
-            },
-            function(){
-                $(".after").css("width", "40px").css("margin-left", "-20px");
-                $(this).css("width", "100%").siblings().css("width", "100%");
-            }
-        );
-    }else{
-        $(".index-description-box").hover(
-            function(){
-                $(this).find(".after").css("width", "70%").css("margin-left", "-35%");
-                $(this).css("width", "50%").siblings().css("width", "25%");
-                $(this).find(".index-description-text").css("margin-top", "30%");
-                $(this).find("p").css("display", "block")
-                       .parent().parent().parent().siblings().find("p").css("display", "none");
-            },
-            function(){
-                $(".after").css("width", "40px").css("margin-left", "-20px");
-                $(this).css("width", "33.3333%").siblings().css("width", "33.3333%");
-            }
-        );
-    }
-});
-
 var Index = {
   "description": [
     {
@@ -50,7 +19,7 @@ var Index = {
         "_요소 및 기능에 대해 동적 생성/수정/스타일링",
         "_Back-End Communication을 포함한 Light Back-end 작업"
       ],
-      "pos_css":"center left"
+      "pos_css":"left center"
     },
     {
       "name": "UX Developer",
@@ -70,12 +39,12 @@ var Index = {
           "_정보 시각화 및 사용자 인터페이스를 디자인",
           "_인터페이스를 활용한 상호작용 방안 모색"
       ],
-      "pos_css":"center right"
+      "pos_css":"right center"
     }
   ],
   "display" : function() {
     for(var i=0; i<Index.description.length; i++){
-        if($(window).width>992){
+        if(window.innerWidth>992){
             $(".index-description-box").eq(i).css("background", "url(./img/top-image_"+(i+1)+".jpg) "+Index.description[i].pos_css +" no-repeat fixed");
         }else{
             $(".index-description-box").eq(i).css("background", "url(./img/top-image_"+(i+1)+".jpg) left top no-repeat fixed");
@@ -86,23 +55,62 @@ var Index = {
             $(".index-description-box").eq(i).find(".index-description-area p").eq(j).text(Index.description[i].des[j]);
         }
     }
-
-    if($(window).width>992){
+ 
+    if(window.innerWidth > 992){
         $(".index-description-box").hover(
             function(){
                 $(this).find(".after").css("width", "70%").css("margin-left", "-35%");
                 $(this).css("width", "50%").siblings().css("width", "25%");
                 $(this).find(".index-description-text").css("margin-top", "30%");
-                $(this).find("p").css("display", "block")
-                       .parent().parent().parent().siblings().find("p").css("display", "none");
+                $(this).find("p").css("display", "block").parent().parent().parent().siblings().find("p").css("display", "none");
             },
             function(){
                 $(".after").css("width", "40px").css("margin-left", "-20px");
                 $(this).css("width", "33.3333%").siblings().css("width", "33.3333%");
+                $(this).find("p").css("display", "none").parent().parent().parent().siblings().find("p").css("display", "none");
             }
         );
     }
   }
 }
 
-Index.display();
+
+$(document).ready(function() {
+  console.log("document ready");
+  Index.display();
+});
+
+$(window).resize(function(){
+    if(window.innerWidth <= 992){
+        //$("body").off("hover", ".index-description-box");
+        $(".index-description-box").css("width", "100%");
+        $(".index-description-box").hover(
+            function(){
+                $(".after").css("width", "40px").css("margin-left", "-20px");
+                $(this).css("width", "100%").siblings().css("width", "100%");
+                $(".index-description-text p").css("display", "block");
+            },
+            function(){
+                $(".after").css("width", "40px").css("margin-left", "-20px");
+                $(this).css("width", "100%").siblings().css("width", "100%");
+                $(".index-description-text p").css("display", "block");
+            }
+        );
+    }else{
+        $(".index-description-box").hover(
+            function(){
+                $(".index-description-text p").css("display", "none");
+                $(this).find(".after").css("width", "70%").css("margin-left", "-35%");
+                $(this).css("width", "50%").siblings().css("width", "25%");
+                $(this).find(".index-description-text").css("margin-top", "30%");
+                $(this).find("p").css("display", "block")
+                       .parent().parent().parent().parent().siblings().find("p").css("display", "none");
+            },
+            function(){
+                $(".after").css("width", "40px").css("margin-left", "-20px");
+                $(this).css("width", "33.3333%").siblings().css("width", "33.3333%");
+                $(this).find("p").css("display", "none").parent().parent().parent().siblings().find("p").css("display", "none");
+            }
+        );
+    }
+});

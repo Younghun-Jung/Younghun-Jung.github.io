@@ -172,6 +172,7 @@ body{
 }
 
 .index-description-text {
+	margin: 0 auto;
 	margin-top:40%;
 }
 .index-description-text .after{
@@ -194,10 +195,20 @@ body{
 	font-weight: 100;
 }
 .index-description-text p{
-	font-size: 20px;
+	margin-top:15px;
+	font-size: 17px;
+	margin-left: 20%;
 	display:none;
 }
-
+.index-ul {
+	list-style-type: none;
+	padding:0;
+	margin:0;
+}
+.index-ul li {
+	padding:0;
+	margin:0;
+}
 
 
 /*
@@ -251,15 +262,15 @@ body{
 .details {
 	font-size: 13px;
 }
-ul {
+.profile-content ul {
 	list-style-type: none;
 	padding-left: 0;
 }
-li{
+.profile-content li{
 	margin-bottom: 1.2em;
 	overflow: hidden;
 }
-li div {
+profile-content li div {
 	overflow: hidden;
 }
 
@@ -493,12 +504,12 @@ li div {
 		float:left;
 	}
 	.index-description-area h2{
-		font-size: 14px;
+		font-size: 19px;
 	}
 	.index-description-area p{
 		display: block;
 		font-weight: 100 !important;
-		font-size: 12px;
+		font-size: 14px;
 	}
 
 	/*profile.html*/
