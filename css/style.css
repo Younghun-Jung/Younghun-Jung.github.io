@@ -571,7 +571,7 @@ profile-content li div {
 }
 
 @media screen and (max-width: 420px) {
-	.index-description-text{
+	.index-description-text p{
 		margin-left: 7%;
 	}
 	.project {
