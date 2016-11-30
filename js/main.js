@@ -17,7 +17,7 @@ var Index = {
         "_최신 웹기술과 반응형, 크라우징 및 웹 표준 준수",
         "_HTML, CSS, JavaScript간 상호작용을 파악",
         "_요소 및 기능에 대해 동적 생성/수정/스타일링",
-        "_Back-End Communication을 포함한 Light Back-end 작업"
+        "_Light Back-end 작업 및 Communication"
       ],
       "pos_css":"left center",
       "pos_css_res" : "top left"
@@ -52,13 +52,13 @@ var Index = {
         }else{
             $(".index-description-box").eq(i).css("background", "url(./img/top-image_"+(i+1)+".jpg) "+Index.description[i].pos_css_res +" no-repeat fixed");
         }
-        
+
         $(".index-description-box").eq(i).find(".index-description-area h2").text(Index.description[i].name);
         for(var j=0; j<Index.description[i].des.length; j++){
             $(".index-description-box").eq(i).find(".index-description-area p").eq(j).text(Index.description[i].des[j]);
         }
     }
- 
+
     if(window.innerWidth > 992){
         $(".index-description-box").hover(
             function(){
