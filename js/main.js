@@ -75,12 +75,18 @@ var Index = {
   ],
   "display" : function() {
     for(var i=0; i<Index.description.length; i++){
-        $(".index-description-box").eq(i).css("background", "url(./img/top-image_"+(i+1)+".jpg) "+Index.description[i].pos_css +" no-repeat fixed");
+        if($(window).width>992){
+            $(".index-description-box").eq(i).css("background", "url(./img/top-image_"+(i+1)+".jpg) "+Index.description[i].pos_css +" no-repeat fixed");
+        }else{
+            $(".index-description-box").eq(i).css("background", "url(./img/top-image_"+(i+1)+".jpg) left top no-repeat fixed");
+        }
+        
         $(".index-description-box").eq(i).find(".index-description-area h2").text(Index.description[i].name);
         for(var j=0; j<Index.description[i].des.length; j++){
             $(".index-description-box").eq(i).find(".index-description-area p").eq(j).text(Index.description[i].des[j]);
         }
     }
+
     if($(window).width>992){
         $(".index-description-box").hover(
             function(){
