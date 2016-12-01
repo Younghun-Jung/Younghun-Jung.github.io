@@ -31,6 +31,26 @@
 
 		},
 		{
+			title: "Cita",
+			popup_title: "가족의 탄생, Cita",
+			date: "2016.09.01 - 2016.12(예정)",
+			category: [
+				"Front-end Web 개발,", "Light Back-end 작업"
+			],
+			type: "Team",
+			img_title_URL: "./img/projects/cita/cita.png",
+			contents: [
+				{
+					url: "./img/projects/cita/cita-1.png",
+					title: "Cita service web site"
+				}
+			],
+			role: "20% | Ruby, Sinatra, HTML, CSS, Bootstrap, JavaScript, jQuery, MySQL",
+			github: "http://www.cita.co.kr",
+			description: "스타트업 Cita는 사진 촬영을 필요로 하는 고객과 포토그래퍼를 연결해주는 웹 서비스입니다. 고객과 포토그래퍼의 중개 역할 뿐만아니라, Cita 고유의 필터가 적용된 사진원본을 제공하고,고객마다 웹 갤러리를 함께 제공하여 본 서비스를 통해 추억을 간직할 수 있게하는 역할을 합니다. "
+
+		},
+		{
 			title: "Turtle Quiz",
 			popup_title: "Simple Web Application",
 			date: "2016.09.20 - 2016.09.27",
