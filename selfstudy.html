@@ -79,7 +79,124 @@
 
 				<!-- Self-study title -->
 				<div class="title-1">SELF STUDY</div>
+				<br>
+				<br>
 
+				<div class="selst-content-list">
+					<div>
+						<h3># var, let 그리고 const</h3>
+					</div>
+					<br>
+					<div>
+						<h4>var 변수 선언</h4>
+						<ul>
+							<li>function-scope</li>
+							<li>유효범위가 함수 단위</li>
+						</ul>
+						<pre class="code brush:js">
+							console.log("Before declaration, foo= "+foo);	// undefined
+							var foo = "foo";
+							console.log("var foo= " + foo);					// foo
+
+							if(true){
+								var foo = "foo2";
+								console.log("In if block, var foo= "+foo);	// foo2
+							}
+							console.log("After if block, var foo= " +foo);	// foo2
+						</pre>
+					</div>
+					<br>
+					<div>
+						<h4>let 변수 선언</h4>
+						<ul>
+							<li>Block-scope</li>
+							<li>블록 범위에 국한되고, 블록 내부에서 외부의 lot 변수 참조 불가</li>
+						</ul>
+						<pre class="code brush:js">
+							//console.log(bar);
+							//Uncaught ReferenceError: bar is no undefined
+							let bar = "bar1";
+							console.log("Afater defitnition and assign, let bar = " + bar);	// bar1
+
+							if(true){
+								let bar = "bar2";
+								console.log("In block, let bar= " + bar);					// bar2
+							}
+							console.log("After block, let bar = " + bar);					// bar1
+						</pre>
+					</div>
+					<br>
+					<div>
+						<h4>일시적 사각지대: Temporal Dead Zone</h4>
+						<ul>
+							<li>let선언 변수의 사각지대</li>
+							<li>블록의 외부에서 let으로 선언한 변수와 동일한 이름의 변수를 블록범위 내에서 선언없이 활용할 경우 not defiend 에러 발생.</li>
+						</ul>
+						<pre class="code brush:js">
+							//let foo = 'foo2';			// 이미 선언되어 있다고 본다. 저 위에 즉, let은 같은 범위에서 동일하게 선언할 수 없다.
+							let foo2 = 'foo2';
+							console.log(foo2);			// foo1
+
+							if(true) {
+								// console.log(foo2);	//foo2 is not defiend
+								let foo2 = 'foo3';		// 블록 범위가 다르므로 위의 let foo2와 if-블록 let foo2는 다르게 본다.
+							}
+							console.log(foo2);			// foo2
+						</pre>
+					</div>
+					<br>
+					<div>
+						<h4>let과 const</h4>
+						<ul>
+							<li>참조형이 아닌 단순형의 경우, 값이 변경이 존재할 때 let, 상수 사용일 때 const로 선언</li>
+							<li>참조형(:array, object, function)의 경우 const로 선언하는 것이 바람직</li>
+							<li>참조형의 경우 const로 선언하더라도 멤버 값을 조작하는 것이 가능</li>
+						</ul>
+						<pre class="code brush:js">
+							//const로 선언한 경우 상수로 동작하므로, const로 선언한 값을 재할당하면 오류가 발생
+							//const foo = 0;
+							//foo = 1;	// Error: Uncaugt TypeError: Assignment to constant variable
+
+							// 참조형(array, object, function)의 경우 const로 선언.
+							const arr = [0,1,2];
+							const refArr = arr;
+
+							arr.push(2);
+							refArr[0] = 10;
+							console.log("Original array, arr = : " + arr);
+							console.log("Refer array, refArr = : " + refArr);
+
+							const obj = {name: "Jung", id:0}
+							const refObj = obj;
+
+							obj.name = "Kim";
+							refObj.id = 1;
+							console.log(obj.id);
+							console.log(refObj.name);
+
+							// 참조가 아닌 Copy의 경우. array => [...배열이름] 연산자, object => Object.assign({}, 오브젝트이름) 함수 사용
+							const obj2 = {name: "Steve", id:0};
+							const arr2 = [0,1,2,3,4];
+
+							const obj2Copied = Object.assign({}, obj2);
+							const arr2Copied = [...arr2];
+
+							obj2.name = "jobs";
+							arr2Copied.push(100);
+							console.log("원본: " + obj2.name + " 카피본: " + obj2Copied.name);
+							console.log("원본: " + arr2 + " 카피본: " + arr2Copied);
+						</pre>
+					</div><br>
+					<div>
+						<h4>결론.</h4>
+						<ul>
+							<li>ES6에서는 var은 지양하고 가급적 let과 const 사용</li>
+							<li>원시형에서 변수는 let, 상수는 const 선언</li>
+							<li>참조는 const 선언</li>
+						</ul>
+					</div>
+				</div>
+				<br><hr><br>
 				<div class="selst-content-list">
 					<div>
 						<h3># 프로토타입 기반 프로그래밍</h3>
@@ -273,9 +390,11 @@
 								<ul>
 									<li>async script는 window의 load event 전 내려받는 즉시 바로 실행</li>
 									<li>defer script는 문서의 parsing 작업이 끝난 후 DOMContentLoaded event 전에 문서 삽입 순서에 따라 실행</li>
-									<img src="./img/selfstudy/async_defer_0.png" alt="">
 								</ul>
 							</li>
+						</ul>
+						<img src="./img/selfstudy/async_defer_0.png" alt="">
+						<ul>
 							<li>script가 문서를 직접 만지고 조작하거나 서로 로딩 순서가 중요할 때 : defer</li>
 							<li>script가 문서를 직접 만지지 않는 경우 : async</li>
 						</ul>
@@ -287,12 +406,11 @@
 							<h5>$(document).ready</h5>
 							<p>DOM이 생성되면 ready method가 실행된다.</p>
 						</div>
-
 						<div>
 							<h5>window.onload</h5>
 							<p>모든 요소 및 소스들이 로드가 완료되면 실행된다.</p>
+							<img style="width: 50%;" src="./img/selfstudy/async_defer_1.png" alt="">
 						</div>
-						<img style="width: 40%;" src="./img/selfstudy/async_defer_1.png" alt="">
 					</div>
 				</div>
 				<br><hr><br>

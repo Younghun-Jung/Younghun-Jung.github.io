@@ -16,7 +16,9 @@
 }
 
 .selst-content-list img {
-	width: 80%;
+	width: 90%;
+	display: block;
+	margin: 0 auto;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
@@ -27,4 +29,11 @@
 
 h5 {
 	font-weight: bold;
+}
+
+
+@media screen and (max-width: 992px) {
+	.selst-content {
+		width: 92%;
+	}
 }
