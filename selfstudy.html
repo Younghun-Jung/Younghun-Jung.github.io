@@ -11,6 +11,16 @@
     <script src="https://code.jquery.com/jquery-1.9.1.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script src="./js/external/shCore.js"></script>
+	<script type="text/javascript" src="./js/external/shBrushCss.js"></script>
+	<script type="text/javascript" src="./js/external/shBrushJScript.js"></script>
+	<link rel=stylesheet type=text/css href="./css/shCore.css">
+	<link rel="stylesheet" href="./css/shThemeEmacs.css">
+	<link rel="stylesheet" href="./css/selfstudy.css">
+	<script>
+  		SyntaxHighlighter.defaults['toolbar'] = false;
+  		SyntaxHighlighter.all();
+  	</script>
 </head>
 <body>
 	<div class="container">
@@ -68,16 +78,373 @@
 			<div class="selst-content">
 
 				<!-- Self-study title -->
-				<div class="title-1">
-					SELF STUDY
-				</div>
+				<div class="title-1">SELF STUDY</div>
 
-				<br><br><br>
-				자료 정리 중입니다....
+				<div class="selst-content-list">
+					<div>
+						<h3># 프로토타입 기반 프로그래밍</h3>
+						<ul>
+							<li>객체의 원형인 프로토타입을 이용하여 새로운 객체를 만들어내는 프로그래밍 기법</li>
+							<li>이렇게 만들어진 객체 역시 자기 자신의 프로토타입을 갖는다. </li>
+							<li>새로운 객체의 원형을 이용하면 또 다른 새로운 객체를 만들어 낼 수 있다.</li>
+							<li>이런 구조로 객체를 확장하는 방식을 프로토타입 기반 프로그래밍이라고 한다.</li>
+							<li>객체의 원형인 프로토 타입을 이용한 클로닝(Cloning)과 개게 특성을 확장해 나가는 방식을 통해 새로운 객체 생성</li>
+						</ul>
+					</div>
+					<br>
+					<div>
+						<h4>자바스크립트의 프로토타입</h4>
+						<h5>'나 자신(객체)의 프로토 타입(객체 원형)은 아버지다.'</h5>
+						<ul>
+							<li>자바스크립트의 모든 객체는 자신을 생성한 객체원형(아버지)에 대한 숨겨진 연결을 갖는다.</li>
+							<li>자기 자신을 생성하기 위해 사용된 객체 원형(아버지)을 프로토 타입이라고 한다.</li>
+							<pre class="code brush: js">
+								function Foo() {};
+								var foo1 = new Foo();
+								console.log(foo1);
+							</pre>
+							<p>- 함수객체 Foo는 foo1객체의 프로토 타입</p>
+							<p>- 함수 Foo()는 foo1객체의 생성자</p>
+							<p>- __proto__이 foo1객체를 만들기 위한 객체 원형에 대한 숨겨진 연결 </p>
+						</ul>
+					</div>
+					<br>
+					<div>
+						<h4>자바스크립트의 프로토타입 프로퍼티</h4>
+						<h5>Prototype 프로퍼티는 자신을 통해 만들어질 객체들이 원형으로 사용할 객체를 말한다.</h5>
+						<ul>
+							<li>모든 함수 객체의 Constructor는 prototype이란 프로퍼티를 지니고 있다.</li>
+							<li class="impo">즉, 함수객체만이 Prototype프로퍼티를 지닌다.</li>
+							<li class="impo">본 함수를 통해 생성된 객체는 Prototype 프로퍼티를 소유하고 있지 않다.</li>
+							<li>Prototype 프로퍼티는 객체가 생성될 당시 만들어지는 객체 자신의 원형(아버지역할)이 될 prototype 객체를 가리킨다. </li>
+							<li>자신을 만든 원형(자신의 아버지)이 아닌 자신을 원형(내가 아버지)으로 할 객체들이 사용할 객체를 말한다.</li>
+							<li>Prototype object는 default로 empty Object를 가리킨다.</li>
+							<li>상위객체 Prototype object ~ 하위객체 Prototype</li>
+							<pre class="code brush: js">
+								function Foo(name) {
+									this.name = name;
+								};
+								var foo1 = new Foo("Younghun");
+								console.log(foo1.name);				// Younghun
+								console.log(foo1.prototype.name); 		// Syntax error
+								Foo.prototype.nation = "Korea";
+								console.log(Foo.nation);			// undefined
+								console.log(Foo.prototype.nation);		// Korea
+								console.log(foo1.nation);			// Korea
+							</pre>
+							<p>- 함수객체 Foo는 Prototype 프로퍼티를 지니고 있다.</p>
+							<p>- Foo의 Protytpe 프로퍼티는 foo1 객체가 생성될 당시 만들어지는 foo1의 prototype 객체를 가리킨다.</p>
+							<p>- 객체 foo1은 prototype프로퍼티를 지니고 있지 않으므로 오류 발생</p>
+							<p>- 함수객체 Foo는 Prototype 프로퍼티를 지니므로 속성 핸들링이 가능하다.</p>
+						</ul>
+					</div>
+					<br>
+					<div>
+						<h4>자바스크립트의 프로토타입 체인(Prototype Chain)</h4>
+						<h5>Prototype Chain이란 프로토타입을 상속해서 만들어지는 객체들 간의 연관관계를 의미한다.</h5>
+						<ul>
+							<li>객체의 생성과정에서 모태가 되는 프로토타입과의 연결고리가 이어져 상속관계를 통해 상위 프로토타입으로 연속해서 이어지는 관계</li>
+							<li>이 연결은 __proto__를 따라 올라간다.</li>
+							<li>__proto__프로퍼티들 간 이어진 점선을 타고 '올라가다' 보면 최종적으로 Object 객체의 prototype Object에 다다른다.</li>
+							<li>즉, JavaScript의 모든 객체는 Object 객체에서부터 파생되어 나온 자식들이다.</li>
+							<li>Prototype chain은 하위 객체가 상위 객체로부터 프로퍼티와 메서드를 상속받는다.</li>
+							<li>하위 객체가 동일한 프로퍼티와 메서드를 재정의하지 않는 이상 상위에서 정의한 내용을 그대로 물려받는다.</li>
+							<li class="impo">
+								사실, 하위 객체는 상위 객체의 속성과 메소드를 상속받는 것이 아니라, 그것을 공유 한다. <br>
+								하위 객체들은 상위 객체의 prototype 객체를 프로토타입으로 하여 만들어졌음에도 불구하고 상위 객체의 프로퍼티를 지니고 있지 않다.
+							</li>
+							<pre class="code brush: js">
+								/*	프로토타입 체인에 의한 공유	*/
+								var A = function() {};
+								var B = new A();
+								var C = new A();
+								A.prototype.x = function() {
+									console.log("Hello");
+								};
+								B.x();	// Hello
+								C.x();	// Hello
+								A.prototype.x = function() {
+									console.log("world");
+								};
+								B.x();	// world
+								C.x();	// world
+							</pre>
+							<pre class="code brush: js">
+								/*	공유와 상속의 구분	*/
+								var A = function() {
+									this.x = 'hello';
+								}
+								A.prototype.y = 'world';
+								var B = new A();
+								B.x();	// 상속(상위객체로부터)
+								B.y();	// 공유(하위객체들끼리 프로토타입 체인을 타고.)
+
+							</pre>
+							<p>- 프로토타입 체인에 의해 하위객체들에게 공유된 메소드를 prototype 프로퍼티를 통해 재정의하면 내용들이 영향을 미친다.</p>
+							<p>- A객체가 생성당시 x 혹은 의미있는 프로퍼티에 대한 정의가 포함된 내용을 가지고 있다면 이는 상속된다.</p>
+							<p>- 상위객체가 지니고 있는 것을 하위객체가 '상속'</p>
+							<p>- Prototype 객체에 접근하여 변경한 내용들은 하위객체들이 '공유'</p>
+						</ul>
+					</div>
+					<br>
+					<div>
+						<h4>자바스크립트 프로토타입 사용 예시</h4>
+						<h5># 예제 1.</h5>
+						<pre class="code brush: js">
+						var Foo = function(name) {
+							var self = this;
+							this.firstName = "Jung ";
+							this.secondName = name;
+							this.fullName = function(f) {
+								return f + self.secondName;
+							}(this.firstName);
+						};
+
+						Foo.prototype.nation = "Korea";
+
+						var foo1 = new Foo("Hyunjung");
+						var foo2 = new Foo("Younghun");
+						console.log("nation: " + foo1.nation + " | name: " + foo1.fullName);
+						console.log("nation: " + foo2.nation + " | name: " + foo2.fullName);
+						</pre>
+					</div>
+					<br>
+					<div>
+						<h5># 예제 2.</h5>
+						<pre class="code brush: js">
+						var A = function() {
+							this.x = function() {
+								console.log('Hello');
+							};
+						};
+						A.x = function() {
+							console.log('world');
+						};
+						var B = new A();
+						var C = new A();
+						A.x();		// world
+						B.x();		// Hello
+						C.x();		// Hello
+						</pre>
+						<p>A.x=function(){...}으로 A 함수객체의 x함수를 재정의 하더라도 prototype객체를 수정한 것이 아니다.</p>
+						<p>생성자를 A()로 하여 생성된 객체는 A함수 객체의 prototype 객체를 cloning하여 생성되므로 Hello 출력</p>
+					</div>
+					<br>
+					<div>
+						<h5># 예제 3.</h5>
+						<pre class="code brush: js">
+						var A = function() { };
+						A.x = function() {
+							console.log("Hello");
+						};
+						A.prototype.x = function() {
+							console.log("world");
+						};
+						var B = new A();
+						var C = new A();
+						A.x();		// Hello
+						B.x();		// world
+						C.x();		// world
+						</pre>
+						<p>A.x=function(){...}으로 A 함수객체의 x함수를 정의하여 Hello 출력</p>
+						<p>생성자 A()가 지닌 Prototype 프로퍼티에 접근하여 x()를 정의,</p>
+						<p>이를 cloning하여 생성된 객체 B, C의 x()는 world 출력</p>
+					</div>
+
+				</div>
+				<br><hr><br>
+				<div class="selst-content-list">
+					<div>
+						<h3># script 태그의 async와 defer 속성</h3>
+						<p>웹 브라우저가 외부 자바스크립트를 불러오는 일반 script태그를 만나게 되면, 우선, 해당 스크립트를 내려받아 해석하고 실행(execute)할 때까지 웹 문서의 HTML 코드 parsing작업을 잠시 뒤로 미룬다. 때문에, 용량이 큰 스크립트 문서를 HTML 해석 초기에 만나게 되면 해당 페이지를 불러오는 속도마저 지체되는 현상을 일으킨다. 이는 결국 전체적 성능을 떨어뜨리는 결과; 병목 현상. 이를 막기 위해 script 태그의 async, defer 속성을 사용한다.</p>
+					</div>
+					<br>
+					<div>
+						<h4>사용 예시</h4>
+						<pre class="code brush: js">
+							<script async src="myAsyncScript.js" onload="myInit()"></script>
+							<script defer src="myDeferScript.js" onload="myInit()"></script>
+						</pre>
+						<ul>
+							<li>async 혹은 defer 된 스크립트 문서는 문서 parsing 작업의 중단 없이 동시에 내려받게 된다.</li>
+							<li>onload handler를 지정해서 일반적인 초기화 작업도 가능</li>
+							<li>
+								<span>async와 defer의 차이는 스크립트 실행 시점이 다르다.</span>
+								<ul>
+									<li>async script는 window의 load event 전 내려받는 즉시 바로 실행</li>
+									<li>defer script는 문서의 parsing 작업이 끝난 후 DOMContentLoaded event 전에 문서 삽입 순서에 따라 실행</li>
+									<img src="./img/selfstudy/async_defer_0.png" alt="">
+								</ul>
+							</li>
+							<li>script가 문서를 직접 만지고 조작하거나 서로 로딩 순서가 중요할 때 : defer</li>
+							<li>script가 문서를 직접 만지지 않는 경우 : async</li>
+						</ul>
+					</div>
+					<br>
+					<div>
+						<h4>***onload, ready</h4>
+						<div>
+							<h5>$(document).ready</h5>
+							<p>DOM이 생성되면 ready method가 실행된다.</p>
+						</div>
+
+						<div>
+							<h5>window.onload</h5>
+							<p>모든 요소 및 소스들이 로드가 완료되면 실행된다.</p>
+						</div>
+						<img style="width: 40%;" src="./img/selfstudy/async_defer_1.png" alt="">
+					</div>
+				</div>
+				<br><hr><br>
+				<div class="selst-content-list">
+					<div>
+						<h3># 클로져(Closer)</h3>
+					</div>
+					<br>
+					<div>
+						<h4>클로저 기본</h4>
+						<p>클로저는 외부함수의 변수에 접근할 수 있는 내부함수를 일컫는다. 스코프 체인(scope chain)으로 표현되기도 하며 클로져는 세 가지 스코프 체인을 지닌다.</p>
+						<ul>
+							<li>클로저 자신에 대한 접근(자신의 블럭 내에 정의된 변수)</li>
+							<li>외부 함수의 변수에 대한 접근</li>
+							<li>전역 변수에 대한 접근</li>
+						</ul>
+					</div>
+					<br>
+					<div>
+						<h5>내부함수는 외부함수의 변수 뿐만 아니라, 파라미터에도 접근 가능</h5>
+						<pre class="code brush: js">
+							var nameIntro = "My name is ";
+							function showName(firstName, lastName) {
+								var nameIntro = "Your name is ";
+								// 내부함수 makeFullname은 외부함수 showName의 변수와 파라메터에 접근 가능.
+								function makeFullName() {
+									return nameIntro + firstName + " " + lastName;
+								}
+								return makeFullName();
+							}
+							console.log(showName("Jung", "Younghun"));	//Your name is Jung Younghun
+						</pre>
+					</div>
+					<br>
+					<div>
+						<h4>클로저 규칙과 부수 효과</h4>
+					</div>
+					<div>
+						<h5>클로저는 외부함수가 리턴된 이후에도 외부함수의 변수에 접근할 수 있다.</h5>
+						<p>외부함수가 리턴된 이후에도 여전히 내부함수가 외부함수의 변수에 접근하고 있다. 자바스크립트의 함수가 실행되었을 때, 함수는 자신이 생성되었을 때와 동일한 스코프 체인을 사용. 그러므로, 내부 함수를 나중에 호출할 수 있다.</p>
+						<pre class="code brush: js">
+							function celebrityName(firstName) {
+								var nameIntro = "This is celebrity is ";
+								// 내부함수 lastName은 외부함수 celebrityName의 변수와 파라미터에 접근할 수 있다.
+								function lastName(theLastName) {
+									return nameIntro + firstName + " " + theLastName;
+								}
+								return lastName;
+							}
+
+							var mjName = celebrityName("Jung");		//여기서 외부함수인 celebrityName가 리턴된다..
+							// 외부함수가 위에서 리턴 된 이후에, 클로져인 lastName이 호출된다.
+							// 아직, 클로저인 lastName은 외부함수인 celebrityName의 변수와 파라메터에 접근 가능하다.
+						</pre>
+					</div>
+					<br>
+					<div>
+						<h5>클로저는 외부 함수의 변수에 대한 참조를 저장한다.</h5>
+						<p>클로저는 실제 값을 저장하는 것이 아니다. 클로저가 호출되기 전에 외부함수의 변수가 변경되었을 때 더 흥미롭다!!!!! 헤헤. 이 강력한 기능은 창의적인 방법으로 활용 가능하다.</p>
+						<pre class="code brush: js">
+							function celebrityID() {
+								var celebrityID = 999;
+								// 몇개의 내부 함수 getID, setID를 지닌 객체를 리턴할 것이다.
+								// 모든 내부함수는 외부변수 celebrityID에 접근할 수 있다.
+								return {
+									setID: function(theNewID) {
+										// 이 내부함수는 외부함수의 값을 언제든지 변경.
+										celebrityID = theNewID;
+									},
+									getID: function() {
+										// setID함수를 통해 갱신된 celebrityID 변수를 리턴
+										// 이것은 changeThdID 함수가 값을 변경한 이후에도 elebrityID의 현재값을 리턴
+										return celebrityID;
+									}
+								}
+							}
+
+							var mjID = celebrityID();	//이 시점에 celebrityID 외부함수가 리턴된다.
+							mjID.getID();				// 999
+							mjID.setID(567);			// 외부함수의 변수를 변경한다.
+							mjID.getID();				// 567; 변경된 celebrityID 변수를 리턴한다.
+						</pre>
+					</div>
+					<br>
+					<div>
+						<h5>클로저 비꼬기</h5>
+						<p>클로저가 갱신된 외부 함수의 변수에 접근함으로써, 외부 함수의 변수가 for 문에 의해 변경될 경우 의도치 않은 버그 발생할 수 있다!?</p>
+						<pre class="code brush: js">
+							function celebrityIDCreator_ver1(theCelebrities) {
+								var i;
+								var uniqueID = 100;
+								for (i=0; i < theCelebrities.length; i++) {
+									// 익명함수를 선언만 한 상태(이렇게 하겠다고,,)
+									theCelebrities[i]["id"] = function() {
+										console.log(uniqueID + i);
+										return uniqueID + i;
+									}
+								}
+								// for문을 돌고난 최종 i 값. 즉 3
+								console.log(i);
+								return theCelebrities; //아래에서 stalloneID.id()를 통해 익명함수를 실행시킬 때 i는 최종적인 3의 값을 유지하므로,,,103
+							}
+
+							var actionCelebs = [
+								{ name: "Stallone", id: 0 },
+								{ name: "Cruise", id: 0 },
+								{ name: "Willis", id: 0 }
+							];
+
+							var createIdForActionCelebs = celebrityIDCreator_ver1(actionCelebs);	// 여기서 이미 i는 3이다.
+							var stalloneID = createIdForActionCelebs[0];	//0번째 객체를 stalloneID에 담고.
+							console.log(stalloneID.id());	// 여기서 id를 반환해봤자 i가 3인 상태가 적용된 것이 반환.
+						</pre>
+					</div>
+					<br>
+					<div>
+						<h5>"즉시 호출된 함수 표현식" IIFE(Immediately Invoked Function) 사용</h5>
+						<p>클로저가 호출되는 당시 갱신된 최종값을 참조하는 부작용을 고치기 위해 즉시 호출 함수를 사용한다.</p>
+						<pre class="code brush:js">
+							function celebrityIDCreator_ver2(theCelebrities) {
+								var i;
+								var uniqueID = 100;
+								for (i=0; i < theCelebrities.length; i++) {
+									theCelebrities[i]["id"] = function(j) {
+										// j 파라미터는 호출 시 즉시 넘겨받은 i의 값이 된다.
+										return function() {
+											// for 문이 순환할 때 마다 현재 i의 값을 넘겨주고, 배열에 저장.
+											return uniqueID + j;
+										}() // 함수의 마지막에 ()을 추가함으로써 함수를 리턴하는 대신 함수를 즉시 실행하고 그 결과값을 리턴.;
+									}(i) // i 변수를 파라미터로 즉시 함수 호출.;
+								}
+								return theCelebrities;
+							}
+
+							var actionCelebs = [
+								{ name: "Stallone", id: 0 },
+								{ name: "Cruise", id: 0 },
+								{ name: "Willis", id: 0 }
+							];
+
+							var createIdForActionCelebs = celebrityIDCreator_ver2(actionCelebs);
+							var stalloneID = createIdForActionCelebs[0];
+							var cruiseID = createIdForActionCelebs[1];
+
+							console.log("stalloneID: " + stalloneID.id);	//100
+							console.log("cruiseID: " + cruiseID.id);		//101
+						</pre>
+					</div>
+				</div>
+				<br><hr><br>
 			</div>
 		</div>
-
-
 	</div>
 	<script type="text/javascript" src="./js/main.js"></script>
 </body>

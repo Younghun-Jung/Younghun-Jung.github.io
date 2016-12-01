@@ -1,0 +1,32 @@
+*{
+	font-weight: 300;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.selst-content {
+  margin: 60px auto;
+}
+.impo {
+	color: red;
+}
+
+.syntaxhighlighter {
+	padding-top: 10px;
+}
+
+img {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.selst-content-list{
+	margin-top: 40px;
+}
+
+h5 {
+	font-weight: bold;
+}
