@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="routerApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>angular_routes</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+     <div class="navbar">
+       <div class="navbar-inner">
+         <a class="brand" href="#">라우터 셈플</a>
+         <ul class="nav">
+           <li><a href="#home">홈</a></li>
+           <!-- #(해쉬태그)를 이용하여 URL 경로를 변경한다. HTML5에서는 History API를 이용하여 #없이 라우팅 처리가 가능하다. 라우트 설정 시 홈 화면과 연결할 #home에 해당하는 라우트 url은 home이다. -->
+           <li><a href="#userList">사용자 관리</a></li>
+         </ul>
+       </div>
+     </div>
+     <ng-view></ng-view>
+     <!-- ngView 지시자를 이용하여 URL 경로가 변경될 시 해당 URL 경로에 해당하는 HTML 조각을 삽입할 곳을 지정한다. -->
+   </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="js/routerApp.js"></script>
+</body>
+</html>
