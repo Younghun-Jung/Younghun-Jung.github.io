@@ -725,6 +725,11 @@ h5{
         font-size: 12px;
     }
 
+
+    #curPeriod {
+        font-size: 35px;
+    }
+
     #style-image {
         width: 100%;
     }
