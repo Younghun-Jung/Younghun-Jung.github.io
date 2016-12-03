@@ -1,4 +1,4 @@
-var temp = "<div data-toggle='modal' data-target='#item_{index}' class='brick' style='width:{width}px;'><img class='modal-img' src='./images/gallery/{index}.jpg' width='100%'></div>";
+var temp = "<div data-toggle='modal' data-target='#item_{index}' class='brick' style='width:{width}px;'><img src='./images/gallery/{index}.jpg' width='100%'></div>";
 
 var tempModal =  "<div id='item_{index}' data-index='{index}' class='modal fade'> <div class='modal-dialog modal-fullsize' style='width:100%;'><div style='text-align:center; height:100vh;'class='modal-content'><span style='color:white; position:absolute; z-index:100;right:0; top:0; font-size:30px;' class='glyphicon glyphicon-remove' data-dismiss='modal'></span><div class='gallery-preBtn' style='float:left'><span class='glyphicon glyphicon-chevron-left' style='color:white; font-size:50px; padding-top:calc((100vh - 61px)/2);'></span></div><img style='height:calc((100vh - 50px));' src='./images/gallery/{index}.jpg'><div class='gallery-nextBtn' style='float:right;'><span class='glyphicon glyphicon-chevron-right' style='color:white; font-size:50px; clear:right; padding-top:calc((100vh - 61px)/2)'></span></div></div></div></div>"
 
@@ -78,23 +78,4 @@ $(".gallery-nextBtn").click(function() {
 
 	}
 
-});
-
-$("#freewall").on("keydown", function(event) {
-	console.log('aa');
-	var allowedKeys = {
-		37: 'left',
-		39: 'right'
-	};
-	console.log(event.keyCode);
-
-	// var curkey = allowedKeys[event.keyCode];
-	// if(event.keyCode === 37) {
-	// 	// curIndex = curIndex-1;
-	// 	alert(curkey);
-	// }else if(event.keyCode === 39) {
-	// 	alert(curkey);
-	// 	// curIndex = curIndex +1;
-	// }
-	
 });

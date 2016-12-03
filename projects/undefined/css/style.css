@@ -718,6 +718,10 @@ h5{
     }
 }
 @media (max-width: 768px){
+    .exam div p {
+        font-size: 12px;
+    }
+
     #style-image {
         width: 100%;
     }

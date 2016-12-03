@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Step03_Progressbar_test.html</title>
+   <title>UNDEFINED</title>
    <script src="js/jquery-3.1.1.js"></script>
    <script src="js/bootstrap.js"></script>
    <link rel="stylesheet" href="css/bootstrap.css"/>
@@ -13,6 +13,7 @@
    			margin: 0;
    			background-image: url("./images/back4.jpg");
    			background-size: cover;
+            background-repeat: no-repeat;
 			/*z-index : 100;*/
    			/*background-color: black;*/
    		}
@@ -39,6 +40,26 @@
    		#content img {
    			width: 100%;
    		}
+
+        @media screen and (max-width: 768px) {
+            body {
+       			background-size: contain;
+       		}
+        	.index-description-area h2{
+        		font-size: 28px;
+        	}
+        	.index-description-area p{
+        		display: block;
+        		font-weight: 100 !important;
+        		font-size: 17px;
+        		margin-left: 25%;
+        	}
+
+        	#mini-name {
+        		left: 40%;
+        		top: 20%;
+        	}
+        }
    </style>
 </head>
 <body>
@@ -70,7 +91,7 @@
 					percent = 0.85;
 					clearInterval(intervalId);
                     setTimeout(function() {
-                        window.location.href="index.html";
+                        window.location.href="file:///Users/JungYounghun/Desktop/Acorn/UNDEFINED_ver6_backup/index.html";
                     }, 1500);
 
 				}

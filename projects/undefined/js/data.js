@@ -787,31 +787,31 @@ var profileObj = {
     members : [
         {
             name: "정영헌  |  Jung Younghun",
-            level: "노예",
+            level: "팀장, 패션전문가",
             profileImg: "./images/contact/profiles/0.png",
             comment: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim repellendus minima dolorum rem excepturi rerum autem eveniet ullam dicta, possimus, iure, doloremque et vitae illum beatae voluptatem ipsam omnis sit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, tempore? Amet veniam, expedita aliquid quidem magni recusandae molestias, magnam commodi voluptatem debitis blanditiis provident, libero ex optio id quasi dignissimos."
         },
         {
             name: "임지영  |  Lim Jiyoung",
-            level: "노예",
+            level: "디자이너",
             profileImg: "./images/contact/profiles/1.png",
             comment: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim repellendus minima dolorum rem excepturi rerum autem eveniet ullam dicta, possimus, iure, doloremque et vitae illum beatae voluptatem ipsam omnis sit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, tempore? Amet veniam, expedita aliquid quidem magni recusandae molestias, magnam commodi voluptatem debitis blanditiis provident, libero ex optio id quasi dignissimos."
         },
         {
             name: "윤수현  |  Yoon Suehyun",
-            level: "노예",
+            level: "인테리어 패션전문가",
             profileImg: "./images/contact/profiles/2.png",
             comment: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim repellendus minima dolorum rem excepturi rerum autem eveniet ullam dicta, possimus, iure, doloremque et vitae illum beatae voluptatem ipsam omnis sit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, tempore? Amet veniam, expedita aliquid quidem magni recusandae molestias, magnam commodi voluptatem debitis blanditiis provident, libero ex optio id quasi dignissimos."
         },
         {
             name: "김종훈  |  Kim Jonghoon",
-            level: "노예",
+            level: "스트릿 패션 전문가",
             profileImg: "./images/contact/profiles/3.png",
             comment: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim repellendus minima dolorum rem excepturi rerum autem eveniet ullam dicta, possimus, iure, doloremque et vitae illum beatae voluptatem ipsam omnis sit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, tempore? Amet veniam, expedita aliquid quidem magni recusandae molestias, magnam commodi voluptatem debitis blanditiis provident, libero ex optio id quasi dignissimos."
         },
         {
             name: "김진국  |  Kim JJinDDA",
-            level: "노예",
+            level: "패션 분석가",
             profileImg: "./images/contact/profiles/4.png",
             comment: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim repellendus minima dolorum rem excepturi rerum autem eveniet ullam dicta, possimus, iure, doloremque et vitae illum beatae voluptatem ipsam omnis sit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, tempore? Amet veniam, expedita aliquid quidem magni recusandae molestias, magnam commodi voluptatem debitis blanditiis provident, libero ex optio id quasi dignissimos."
         }
