@@ -680,7 +680,7 @@ var eventObj = {
     items: [
         {
             name: "NAME",
-            imgURL: "./images/event/items/1.png",
+            imgURL: "./images/event/items/1.PNG",
             id: "0",
             provider: "김진국",
             category: ["이불", "인테리어", "잠만보", "포켓몬", "캐릭터이불"],
@@ -690,7 +690,7 @@ var eventObj = {
         },
         {
             name: "NAME",
-            imgURL: "./images/event/items/2.png",
+            imgURL: "./images/event/items/2.PNG",
             id: "1",
             provider: "김진국",
             category: ["청자켓", "청바지", "청청", "7080", "2017S/S"],
