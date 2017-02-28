@@ -300,6 +300,7 @@ profile-content li div {
 }
 .school-area, .school-date {
 	float: right;
+	margin-right: 2px;
 }
 .school-degree, .school-date, .school-prof {
 	font-weight:lighter;
