@@ -11,6 +11,26 @@
 
 	var portfolioData = [
 		{
+			title: "TODO app",
+			popup_title: "TODO simple application using Angular JS",
+			date: "2017.03.01 - 2017.03.03",
+			category: [
+				"Simple Web App,", "Angular JS,", "Bootstrap,"
+			],
+			type: "Individual",
+			img_title_URL: "./img/projects/angular_todo/angular_todo.png",
+			contents: [
+				{
+					url: "./img/projects/angular_todo/angular_todo.png",
+					title: "TODO Web App using Angular JS"
+				}
+			],
+			role: "가상 데이터 구조화(Model), HTML, CSS, JS 개발",
+			github: "https://github.com/Younghun-Jung/angular_todo",
+			description: "Youtube의 angular 강의를 토대로 TODO application 프로젝트를 진행하였습니다. TODO list를 추가, 수정 및 삭제할 수 있으며, 키워드 및 진행 상태에 따른 fliter 기능을 구현하였습니다."
+
+		},
+		{
 			title: "Fashion Magazine",
 			popup_title: "#UNDEFINED: Fashion Magazine Community Web Site",
 			date: "2016.10.17 - 2016.10.24",
