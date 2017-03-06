@@ -69,6 +69,9 @@
         <!-- title area -->
         <!--Profile title-->
 
+        <!-- content layer -->
+        <div class="portfolio_lyr"></div>
+
         <!--content area-->
         <div class="content" ng-app="HomepageApp">
             <div class="portfolio-content" ng-controller="portfolioCtrl as list">
@@ -95,7 +98,7 @@
                         <p><strong>Date: </strong><span>{{project.date}}</span></p>
                         <p><strong>Category: </strong><span ng-repeat="cate in project.category">{{cate}} </span></p>
                         <p><strong>Type: </strong><span>{{project.type}}</span></p>
-                        <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#project-info" ng-click="list.changeActiveProject(project)">More Details</button>
+                        <button class="btn btn-primary pull-right lyr_on" data-toggle="modal" data-target="#project-info" ng-click="list.changeActiveProject(project)">More Details</button>
                       </div>
                     </div>
                   </div>
@@ -124,7 +127,7 @@
                           </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-default lyr_off" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
