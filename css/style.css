@@ -570,6 +570,13 @@ body.modal-open {
 		min-height:500px;
 		position: relative;
 	}
+	.modal {
+		top: 10vh;
+	}
+	.modal-body {
+		height: 50vh;
+		overflow-y: scroll;
+	}
 
 }
 
