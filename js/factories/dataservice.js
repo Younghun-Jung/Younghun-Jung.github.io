@@ -53,7 +53,7 @@
 		{
 			title: "Cita",
 			popup_title: "가족의 탄생, Cita",
-			date: "2016.09.01 - 2016.12(예정)",
+			date: "2016.09.01 - 2016.12",
 			category: [
 				"Front-end Web 개발,", "Light Back-end 작업"
 			],
