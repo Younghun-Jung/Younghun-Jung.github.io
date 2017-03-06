@@ -14,8 +14,7 @@
 
 		function changeActiveProject(currentProject) {
 			vm.activeProject = currentProject;
-			// display lyr
-			document.querySelector('.portfolio_lyr').classList.add('active');
+			document.querySelector('body').classList.add('modal-open');
 		}
 	}
 })();
