@@ -148,6 +148,7 @@ body{
 		area.html Content
 */
 .content {
+	position: relative;
 	width: calc(100% - 240px);
 	/*width:100%;*/
 	height: 100vh;
@@ -284,7 +285,7 @@ body{
 	margin-bottom: 1.2em;
 	overflow: hidden;
 }
-profile-content li div {
+.profile-content li div {
 	overflow: hidden;
 }
 
@@ -395,6 +396,9 @@ profile-content li div {
 	min-height:400px;
 	position: relative;
 }
+#project-info {
+	z-index: 10;
+}
 #project-info h5{
 	text-align: center;
 }
@@ -420,6 +424,15 @@ profile-content li div {
     color: white;
 }
 
+.portfolio_lyr.active {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.7);
+}
 
 /*
 	SELF-STUDY.html
