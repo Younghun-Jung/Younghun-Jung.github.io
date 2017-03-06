@@ -117,3 +117,8 @@ $(window).resize(function(){
         );
     }
 });
+
+// remove lyr
+$('.lyr_off').on('click', function() {
+    $('.portfolio_lyr').removeClass('active');
+});
